@@ -12,7 +12,7 @@ import Header from "@/components/header";
 const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TarreDev Landing Page",
+  title: "Portafolio WaistenDev",
   description: "Landing page made by TarreDev",
 };
 
