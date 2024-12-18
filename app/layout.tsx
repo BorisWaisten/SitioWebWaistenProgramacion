@@ -13,7 +13,6 @@ const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Portafolio WaistenDev",
-  description: "Landing page made by TarreDev",
 };
 
 export default function RootLayout({
