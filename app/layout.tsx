@@ -12,7 +12,7 @@ import Header from "@/components/header";
 const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portafolio WaistenDev",
+  title: "Sitio Web Waisten Programación",
 };
 
 export default function RootLayout({
