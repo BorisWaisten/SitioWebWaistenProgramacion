@@ -24,11 +24,6 @@ const ContactPage = () => {
                 <h1 className="text-2xl leading-tight md:text-4xl">
                     Ponte en <span className="font-bold text-secondary">contacto conmigo</span>
                 </h1>
-
-                <p className="text-lg md:text-xl">
-                    Puedes contactarme a través de los siguientes medios:
-                </p>
-
                 <div className="grid grid-cols-3 gap-3">
                     <button
                         onClick={handleMailClick}
@@ -37,7 +32,7 @@ const ContactPage = () => {
                         <Mail size={30} strokeWidth={1} />
                     </button>
                     <a
-                        href="https://instagram.com/devwaisten"
+                        href="https://instagram.com/waistenprogramacion"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-lg text-secondary hover:underline"
