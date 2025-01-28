@@ -1,9 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
+
 
 import { dataPortfolio } from "@/data";
 
-import CircleImage from "@/components/circle-image";
 import TransitionPage from "@/components/transition-page";
 import ContainerPage from "@/components/container-page";
 import PortfolioBox from "@/components/portfolio-box";

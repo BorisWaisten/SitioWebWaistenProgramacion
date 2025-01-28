@@ -136,7 +136,7 @@ export const dataPortfolio = [
         title: "Sitio gestion de ventas",
         image: "/webGestion.png",
         urlGithub: "#!",
-        urlDemo: "https://ventas.donatellaspa.shop/",
+        urlDemo: "https://gestiondeventadonatella.vercel.app/",
     },
     {
         id: 4,
