@@ -1,4 +1,4 @@
-import { Instagram,BookText, CodeSquare, HomeIcon, Linkedin,  Crop, Pencil, Computer, Book, Rocket, Speech } from "lucide-react";
+import { Instagram,BookText, CodeSquare, HomeIcon, Linkedin,  Crop, Pencil, Computer, Book, Rocket, Speech, CarFront, AreaChart, StoreIcon, ScrollIcon } from "lucide-react";
 
 export const socialNetworks = [
     {
@@ -35,84 +35,26 @@ export const itemsNavbar = [
     },
 ];
 
-export const dataAboutPage = [
-    {
-        id: 1,
-        title: "Frontend Developer",
-        subtitle: "TechSolutions",
-        description: "Colabora con un equipo dinámico para desarrollar interfaces de usuario atractivas y funcionales que impulsen el éxito de nuestros clientes en el mundo digital.",
-        date: "Nov 2023 ",
-    },
-    {
-        id: 2,
-        title: "Creador de Experiencias Digitales",
-        subtitle: "PixelCrafters",
-        description: "Trabaja en proyectos emocionantes que desafían los límites de la creatividad y la tecnología. Únete a nosotros mientras creamos experiencias digitales cautivadoras que inspiran y cautivan a nuestros usuarios.",
-        date: "May 2021",
-    },
-    {
-        id: 3,
-        title: "Especialista en Desarrollo Frontend",
-        subtitle: "CodeForge Solutions",
-        description: "Como desarrollador frontend, tendrás la oportunidad de colaborar en proyectos diversos y desafiantes que te permitirán expandir tus habilidades y dejar tu huella en el mundo digital.",
-        date: "Ago 2019",
-    },
-    {
-        id: 4,
-        title: "Prácticas Grado",
-        subtitle: "WebWizards Inc.",
-        description: "Únete a nosotros mientras creamos sitios web y aplicaciones interactivas que sorprenden y deleitan a nuestros clientes. Si tienes pasión por el diseño y la programación, y disfrutas colaborar en un entorno creativo, ¡queremos conocerte!        ",
-        date: "Mar 2018",
-    },
-]
 
-export const dataCounter = [
-    {
-        id: 0,
-        endCounter: 10,
-        text: "Años de experiencia",
-        lineRight: true,
-        lineRightMobile: true,
-    },
-    {
-        id: 1,
-        endCounter: 80,
-        text: "Clientes satisfechos",
-        lineRight: true,
-        lineRightMobile: false,
-    },
-    {
-        id: 2,
-        endCounter: 220,
-        text: "Proyectos finalizados",
-        lineRight: true,
-        lineRightMobile: true,
-    },
-    {
-        id: 3,
-        endCounter: 30,
-        text: "Premios ganadores",
-        lineRight: false,
-        lineRightMobile: false,
-    },
-];
+
 
 export const serviceData = [
 
     {
-        icon: <Pencil />,
-        title: "Diseño",
-        description: "Diseño creativo y profesional de interfaces web intuitivas y atractivas, centradas en la experiencia del usuario",
-    },
-    {
         icon: <Computer />,
-        title: "Desarrollo",
-        description: "Diseño y desarrollo de sitios web a medida, adaptados a tus necesidades",
+        title: "Paginas Web/Movil",
     },
     {
-        icon: < Book/>,
-        title: "Gestion de Ventas y Compras",
-        description: "Desarrollo de sistemas gestion a medida para agilizar tu negocio y obtener un mejor rendimiento",
+        icon: <StoreIcon/>,
+        title: "Paginas Ecommerce",
+    },
+    {
+        icon: < AreaChart/>,
+        title: "Sistemas de Gestion",
+    },
+    {
+        icon: < ScrollIcon/>,
+        title: "Invitaciones de Eventos",
     }
 ];
 
