@@ -18,14 +18,16 @@ const PortfolioBox = (props: PortfolioBoxProps) => {
     return (
         <div
             key={id}
-            className="p-4 border border-teal-50 rounded-xl"
+            className="p-4 border space-y-5 border-teal-50 rounded-xl"
         >
-            <h3 className="mb-4 text-xl">{title}</h3>
-            <Image
-                src={image}
-                alt="Image"
-                width={200} height={200} className="w-full md:w-[200px] rounded-2xl h-auto"
-            />
+            <h3 >{title}</h3>
+            <div className="h-[100px]">
+                <Image
+                    src={image}
+                    alt="Image"
+                    width={200} height={200} className="w-full md:w-[200px] rounded-2xl h-full"
+                />
+            </div>
 
             <div className="flex gap-5 mt-5">
                 <Link
