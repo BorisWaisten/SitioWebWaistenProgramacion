@@ -2,8 +2,6 @@
 
 import { Avatar } from "@/components/avatar";
 import ContainerPage from "@/components/container-page";
-import CounterServices from "@/components/counter-services";
-import TimeLine from "@/components/time-line";
 import TransitionPage from "@/components/transition-page";
 
 const AboutMePage = () => {
@@ -18,10 +16,6 @@ const AboutMePage = () => {
                         trayectoria profesional
                     </span>
                 </h1>
-
-                <CounterServices />
-
-                <TimeLine />
 
             </ContainerPage>
         </>
