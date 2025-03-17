@@ -44,24 +44,32 @@ export const itemsNavbar = [
 
 
 
-export const serviceData = [
 
-    {
-        icon: <Computer />,
-        title: "Paginas Web/Movil",
-    },
-    {
-        icon: <StoreIcon/>,
-        title: "Paginas Ecommerce",
-    },
-    {
-        icon: < AreaChart/>,
-        title: "Sistemas de Gestion",
-    },
-    {
-        icon: < ScrollIcon/>,
-        title: "Invitaciones de Eventos",
-    }
+export const serviceData = [
+  {
+    icon: <Computer />,
+    title: "Páginas Web/Móvil",
+    description: "Diseño y desarrollo de sitios web y apps móviles con tecnologías modernas como React y Next.js.",
+    image: "/webApicola.png",
+  },
+  {
+    icon: <StoreIcon />,
+    title: "Páginas Ecommerce",
+    description: "Creamos tiendas en línea optimizadas para ventas con integración de pagos y diseño atractivo.",
+    image: "/webEco.png",
+  },
+  {
+    icon: <AreaChart />,
+    title: "Sistemas de Gestión",
+    description: "Automatizamos y mejoramos procesos empresariales con software a medida.",
+    image: "/webGestion.png",
+  },
+  {
+    icon: <ScrollIcon />,
+    title: "Invitaciones de Eventos",
+    description: "Diseño y desarrollo de invitaciones digitales interactivas para bodas y eventos especiales.",
+    image: "/webBoda.png",
+  },
 ];
 
 export const dataPortfolio = [
