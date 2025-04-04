@@ -11,7 +11,7 @@ export const socialNetworks = [
     {
         id: 3,
         logo: <Instagram size={30} strokeWidth={1} />,
-        src: "https://www.instagram.com/devwaisten/",
+        src: "https://www.instagram.com/waistenprogramacion/",
     },
 ];
 
