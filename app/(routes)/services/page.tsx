@@ -26,7 +26,7 @@ const ServicesPage = () => {
             <Accordion.Header>
               <Accordion.Trigger
                 onClick={() => setSelectedService(service.title)}
-                className="w-full flex justify-between items-center p-4 text-xl font-semibold bg-gray-100 hover:bg-gray-200 transition rounded-md"
+                className="w-full flex justify-between items-center p-4 text-xl font-semibold  hover:bg-gray-200 hover:text-black transition rounded-md"
               >
                 <div className="flex items-center gap-4">
                   <span className="text-3xl">{service.icon}</span>
@@ -36,7 +36,7 @@ const ServicesPage = () => {
               </Accordion.Trigger>
             </Accordion.Header>
 
-            <Accordion.Content className="p-4 bg-white shadow-md rounded-md">
+            <Accordion.Content className="p-4 text-center hover:bg-white shadow-md rounded-md">
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ const ServicesPage = () => {
               >
                 <p className="text-gray-600">{service.description}</p>
                 {service.image && (
-                  <div className="mt-4">
+                  <div className="mt-4 flex justify-center">
                     <Image
                       src={service.image}
                       alt={service.title}

@@ -52,25 +52,25 @@ export const serviceData = [
     icon: <Computer />,
     title: "Páginas Web/Móvil",
     description: "Diseño y desarrollo de sitios web y apps móviles con tecnologías modernas como React y Next.js.",
-    image: "/images/web-dev.jpg",
+    image: "/webApicola.png",
   },
   {
     icon: <StoreIcon />,
     title: "Páginas Ecommerce",
     description: "Creamos tiendas en línea optimizadas para ventas con integración de pagos y diseño atractivo.",
-    image: "/images/ecommerce.jpg",
+    image: "/webEco.png",
   },
   {
     icon: <AreaChart />,
     title: "Sistemas de Gestión",
     description: "Automatizamos y mejoramos procesos empresariales con software a medida.",
-    image: "/images/gestion.jpg",
+    image: "/webGestion.png",
   },
   {
     icon: <ScrollIcon />,
     title: "Invitaciones de Eventos",
     description: "Diseño y desarrollo de invitaciones digitales interactivas para bodas y eventos especiales.",
-    image: "/images/invitaciones.jpg",
+    image: "/webBoda.png",
   },
 ];
 
