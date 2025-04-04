@@ -1,3 +1,5 @@
+import { image } from "framer-motion/client";
+import { url } from "inspector";
 import { Instagram,BookText, CodeSquare, HomeIcon, Linkedin,  PhoneCallIcon, Pencil, Computer, Book, Rocket, Speech, CarFront, AreaChart, StoreIcon, ScrollIcon } from "lucide-react";
 
 export const socialNetworks = [
@@ -44,24 +46,32 @@ export const itemsNavbar = [
 
 
 
-export const serviceData = [
 
-    {
-        icon: <Computer />,
-        title: "Paginas Web/Movil",
-    },
-    {
-        icon: <StoreIcon/>,
-        title: "Paginas Ecommerce",
-    },
-    {
-        icon: < AreaChart/>,
-        title: "Sistemas de Gestion",
-    },
-    {
-        icon: < ScrollIcon/>,
-        title: "Invitaciones de Eventos",
-    }
+export const serviceData = [
+  {
+    icon: <Computer />,
+    title: "Páginas Web/Móvil",
+    description: "Diseño y desarrollo de sitios web y apps móviles con tecnologías modernas como React y Next.js.",
+    image: "/images/web-dev.jpg",
+  },
+  {
+    icon: <StoreIcon />,
+    title: "Páginas Ecommerce",
+    description: "Creamos tiendas en línea optimizadas para ventas con integración de pagos y diseño atractivo.",
+    image: "/images/ecommerce.jpg",
+  },
+  {
+    icon: <AreaChart />,
+    title: "Sistemas de Gestión",
+    description: "Automatizamos y mejoramos procesos empresariales con software a medida.",
+    image: "/images/gestion.jpg",
+  },
+  {
+    icon: <ScrollIcon />,
+    title: "Invitaciones de Eventos",
+    description: "Diseño y desarrollo de invitaciones digitales interactivas para bodas y eventos especiales.",
+    image: "/images/invitaciones.jpg",
+  },
 ];
 
 export const dataPortfolio = [
@@ -93,6 +103,13 @@ export const dataPortfolio = [
         urlGithub: "https://github.com/BorisWaisten/Ecommerce-app",
         urlDemo: "https://ecommerce-app-bw.vercel.app/",
     },
+    {
+        id:5,
+        title:"Sitio Web de Orden de los Dominicos",
+        image:"/webTriduo.png",
+        urlGithub:"https://github.com/LucasWaisten/triduo-op-ar",
+        urlDemo:"https://hemosvistosugloria.op.org.ar",
+    }
 ];
 
 export const dataTestimonials = [
