@@ -3,11 +3,11 @@ import { url } from "inspector";
 import { Instagram,BookText, CodeSquare, HomeIcon, Linkedin,  PhoneCallIcon, Pencil, Computer, Book, Rocket, Speech, CarFront, AreaChart, StoreIcon, ScrollIcon } from "lucide-react";
 
 export const socialNetworks = [
-    {
-        id: 2,
-        logo: <Linkedin size={30} strokeWidth={1} />,
-        src: "https://www.linkedin.com/in/boris-waisten/",
-    },
+    // {
+    //     id: 2,
+    //     logo: <Linkedin size={30} strokeWidth={1} />,
+    //     src: "https://www.linkedin.com/in/boris-waisten/",
+    // },
     {
         id: 3,
         logo: <Instagram size={30} strokeWidth={1} />,
