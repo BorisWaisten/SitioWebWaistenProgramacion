@@ -19,25 +19,31 @@ export const socialNetworks = [
 export const itemsNavbar = [
     {
         id: 1,
-        title: "Home",
+        title: "Inicio",
         icon: <HomeIcon size={25} color="#fff" strokeWidth={1} />,
         link: "/",
     },
     {
+        id: 2,
+        title: "Sobre Nosotros",
+        icon: <Pencil size={25} color="#fff" strokeWidth={1} />,
+        link: "/about-me",
+    },
+    {
         id: 3,
-        title: "Book",
+        title: "Servicios",
         icon: <BookText size={25} color="#fff" strokeWidth={1} />,
         link: "/services",
     },
     {
         id: 4,
-        title: "Target",
+        title: "Trabajos",
         icon: <CodeSquare size={25} color="#fff" strokeWidth={1} />,
         link: "/portfolio",
     },
     {
         id: 5,
-        title: "Contact",
+        title: "Contacto",
         icon: <PhoneCallIcon size={25} color="#fff" strokeWidth={1} />,
         link: "/contact",
     }
@@ -76,7 +82,14 @@ export const serviceData = [
 
 export const dataPortfolio = [
     {
-        id: 1,
+        id:1,
+        title:"Plataforma de Orden de Predicadores",
+        image:"/webTriduo.png",
+        urlGithub:"https://github.com/LucasWaisten/triduo-op-ar",
+        urlDemo:"https://hemosvistosugloria.op.org.ar",
+    },
+    {
+        id: 3,
         title: "Web Apicola",
         image: "/webApicola.png",
         urlGithub: "https://github.com/BorisWaisten/proyect-apicola",
@@ -90,25 +103,18 @@ export const dataPortfolio = [
         urlDemo: "https://martuygino.vercel.app/",
     },
     {
-        id: 3,
+        id: 4,
         title: "Sitio gestion de ventas",
         image: "/webGestion.png",
         urlGithub: "#!",
         urlDemo: "https://gestiondeventadonatella.vercel.app/",
     },
     {
-        id: 4,
+        id: 5,
         title: "Modelo Web Ecommerce ",
         image: "/webEco.png",
         urlGithub: "https://github.com/BorisWaisten/Ecommerce-app",
         urlDemo: "https://ecommerce-app-bw.vercel.app/",
-    },
-    {
-        id:5,
-        title:"Sitio Web de Orden de los Dominicos",
-        image:"/webTriduo.png",
-        urlGithub:"https://github.com/LucasWaisten/triduo-op-ar",
-        urlDemo:"https://hemosvistosugloria.op.org.ar",
     }
 ];
 
