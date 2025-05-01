@@ -39,7 +39,7 @@ export const itemsNavbar = [
         id: 4,
         title: "Trabajos",
         icon: <CodeSquare size={25} color="#fff" strokeWidth={1} />,
-        link: "/portfolio",
+        link: "/works",
     },
     {
         id: 5,
@@ -83,14 +83,21 @@ export const serviceData = [
 export const dataPortfolio = [
     {
         id:1,
-        title:"Plataforma de Orden de Predicadores",
+        title:"Plataforma de Streaming",
         image:"/webTriduo.png",
         urlGithub:"https://github.com/LucasWaisten/triduo-op-ar",
         urlDemo:"https://hemosvistosugloria.op.org.ar",
     },
     {
+        id: 5,
+        title: "Demo App Ecommerce",
+        image: "/webEco.png",
+        urlGithub: "https://github.com/BorisWaisten/Ecommerce-app",
+        urlDemo: "https://ecommerce-app-bw.vercel.app/",
+    },
+    {
         id: 3,
-        title: "Web Apicola",
+        title: "Pagina Web Apicola",
         image: "/webApicola.png",
         urlGithub: "https://github.com/BorisWaisten/proyect-apicola",
         urlDemo: "https://argentinehoney.com/",
@@ -108,13 +115,6 @@ export const dataPortfolio = [
         image: "/webGestion.png",
         urlGithub: "#!",
         urlDemo: "https://gestiondeventadonatella.vercel.app/",
-    },
-    {
-        id: 5,
-        title: "Modelo Web Ecommerce ",
-        image: "/webEco.png",
-        urlGithub: "https://github.com/BorisWaisten/Ecommerce-app",
-        urlDemo: "https://ecommerce-app-bw.vercel.app/",
     }
 ];
 
