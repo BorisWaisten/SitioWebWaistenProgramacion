@@ -32,7 +32,7 @@ const Introduction = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
           <a
-            href="/portfolio"
+            href="/works"
             className="btn-style4 px-6 py-3 text-base sm:text-md rounded-xl"
           >
             Ver proyectos
