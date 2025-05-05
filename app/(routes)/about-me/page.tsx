@@ -10,13 +10,13 @@ const developers = [
     name: "Boris Waisten",
     image: "/BORIS 2.png",
     description:
-      "Analista de Sistemas.",
+      "Analista de Sistemas de Información, recibido en el Instituto Tecnológico ORT.",
   },
   {
     name: "Lucas",
     image: "/lucas2.jpg",
     description:
-      "Ingeniero Informatico.",
+      "Ingeniero Informatico, recibido en la Universidad de Buenos Aires.",
   },
 ];
 
@@ -45,8 +45,8 @@ const AboutMePage = () => {
                 className="rounded-full shadow-lg mb-4 object-cover"
               />
               <h2 className="text-xl font-semibold text-primary">{dev.name}</h2>
-              <p className="text-base text-white/80 max-w-md mt-2">{dev.description}</p>
-            </MotionTransition>
+              <p className="text-base text-balance text-white/80 max-w-md mt-2">{dev.description}</p>
+            </MotionTransition> 
           ))}
         </div>
       </ContainerPage>
