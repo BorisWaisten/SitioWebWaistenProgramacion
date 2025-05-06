@@ -15,6 +15,7 @@ const config: Config = {
       colors: {
         secondary: "#48bfda",
         darkBg: "#131424",
+        primaryText:"#0c1a1a",
       },
       backgroundImage: {
         "gradient-cover":

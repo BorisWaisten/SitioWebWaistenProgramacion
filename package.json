@@ -18,7 +18,8 @@
     "react-countup": "^6.5.0",
     "react-dom": "^18",
     "react-type-animation": "^3.2.0",
-    "swiper": "^11.0.6",
+    "recharts": "^2.15.3",
+    "swiper": "^11.2.6",
     "tsparticles": "^3.2.1"
   },
   "devDependencies": {

@@ -1,71 +1,60 @@
 "use client";
-import { useState } from "react";
 import { Instagram, Mail, MessageCircle } from "lucide-react";
 import CircleImage from "@/components/circle-image";
-import TransitionPage from "@/components/transition-page";
 import ContainerPage from "@/components/container-page";
+import { MotionTransition } from "@/components/transition-component";
+
+const contactOptions = [
+  {
+    title: "Correo Electrónico",
+    icon: <Mail size={30} />,
+    description: "boriswaisten@gmail.com",
+    href: "mailto:boriswaisten@gmail.com",
+  },
+  {
+    title: "Instagram",
+    icon: <Instagram size={30} />,
+    description: "@waistenprogramacion",
+    href: "https://instagram.com/waistenprogramacion",
+  },
+  {
+    title: "WhatsApp",
+    icon: <MessageCircle size={30} />,
+    description: "+54 3446 575620",
+    href: "https://wa.me/543446575620",
+  },
+];
 
 const ContactPage = () => {
-    const [showModal, setShowModal] = useState(false);
+  return (
+    <ContainerPage>
+      <MotionTransition position="bottom">
+      <CircleImage />
 
-    const handleMailClick = () => {
-        setShowModal(true);
-    };
+      <div className="flex flex-col items-center text-center space-y-8 mt-10">
+        <h1 className="text-3xl md:text-5xl font-semibold">
+          Ponte en <span className="text-secondary font-bold">contacto</span>
+        </h1>
 
-    const closeModal = () => {
-        setShowModal(false);
-    };
-
-    return (
-        <ContainerPage>
-            <TransitionPage />
-            <CircleImage />
-            <div className="flex flex-col items-center justify-center h-full text-center space-y-8">
-                <h1 className="text-2xl leading-tight md:text-4xl">
-                    Ponte en <span className="font-bold text-secondary">contacto conmigo</span>
-                </h1>
-                <div className="grid grid-cols-3 gap-3">
-                    <button
-                        onClick={handleMailClick}
-                        className="text-lg text-secondary hover:underline"
-                    >
-                        <Mail size={30} strokeWidth={1} />
-                    </button>
-                    <a
-                        href="https://instagram.com/waistenprogramacion"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-lg text-secondary hover:underline"
-                    >
-                        <Instagram size={30} strokeWidth={1} />
-                    </a>
-                    <a
-                        href="https://wa.me/15575620"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-lg text-secondary hover:underline"
-                    >
-                        <MessageCircle size={30} strokeWidth={1} />
-                    </a>
-                </div>
-            </div>
-
-            {/* Modal para mostrar el correo */}
-            {showModal && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-                    <div className="bg-white p-6 rounded-lg shadow-lg text-center space-y-4">
-                        <p className="text-lg text-secondary">boriswaisten@gmail.com</p>
-                        <button
-                            onClick={closeModal}
-                            className="px-4 py-2 mt-4 text-white bg-secondary rounded-md hover:bg-secondary/80"
-                        >
-                            Cerrar
-                        </button>
-                    </div>
-                </div>
-            )}
-        </ContainerPage>
-    );
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl">
+          {contactOptions.map((option) => (
+            <a
+              key={option.title}
+              href={option.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-center p-6 bg-white/10 rounded-xl hover:bg-secondary/10 transition-all duration-300 border border-white/10 hover:border-secondary shadow-sm hover:shadow-lg backdrop-blur-lg"
+            >
+              <div className="text-secondary mb-4">{option.icon}</div>
+              <h3 className="text-lg font-bold text-white">{option.title}</h3>
+              <p className="text-sm text-white/70 mt-2">{option.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+      </MotionTransition>
+    </ContainerPage>
+  );
 };
 
 export default ContactPage;

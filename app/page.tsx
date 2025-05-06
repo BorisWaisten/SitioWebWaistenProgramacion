@@ -1,17 +1,18 @@
 "use client"
 
-import { CoverParticles } from "@/components/cover-particles";
 import Introduction from "@/components/introduction";
-import TransitionPage from "@/components/transition-page";
-
+import WhatWeDo from "@/components/what-we-do";
+import WhyDigital from "@/components/why-digital";
+import PortfolioPage from "@/components/portafolio-preview";
+import CallToAction from "@/components/call-to-action";
 export default function Home() {
   return (
     <main>
-      <TransitionPage />
-      <div className="flex min-h-[100vh] h-full bg-no-repeat bg-gradient-cover">
-        <CoverParticles />
-        <Introduction />
-      </div>
+      <Introduction />
+      <WhyDigital />
+      <WhatWeDo />
+      <PortfolioPage />
+      <CallToAction />
     </main>
   );
 }

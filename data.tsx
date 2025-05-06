@@ -29,12 +29,6 @@ export const itemsNavbar = [
         link: "/about-me",
     },
     {
-        id: 3,
-        title: "Servicios",
-        icon: <BookText size={25} color="#fff" strokeWidth={1} />,
-        link: "/services",
-    },
-    {
         id: 4,
         title: "Trabajos",
         icon: <CodeSquare size={25} color="#fff" strokeWidth={1} />,

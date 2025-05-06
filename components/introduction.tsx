@@ -1,51 +1,47 @@
+"use client"
+
 import { TypeAnimation } from 'react-type-animation';
+import { motion } from 'framer-motion';
 import './introduction.css';
+import { CoverParticles } from './cover-particles';
 
 const Introduction = () => {
   return (
-    <section className="z-20 w-full min-h-screen bg-darkBg/60 flex items-center justify-center px-4 py-12">
-      <div className="max-w-screen-lg text-center flex flex-col items-center">
-        <h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl leading-tight font-semibold">
-          Si puedes pensarlo, <br />
-          <TypeAnimation
-            sequence={[
-              'puedes programarlo',
-              1000,
-              'puedes optimizarlo',
-              1000,
-              'puedes implementarlo',
-              1000,
-              'puedes desarrollarlo',
-              1000
-            ]}
-            wrapper="span"
-            speed={50}
-            repeat={Infinity}
-            className="font-bold text-secondary"
-          />
-        </h1>
+    <section
+      aria-label="Introducción principal"
+      className="z-20 w-full min-h-screen  flex items-center justify-center px-4 py-12"
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="max-w-screen-lg text-center flex flex-col items-center"
+      >
+      <CoverParticles />
+<h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl leading-tight font-semibold text-white">
+  Creamos soluciones digitales <br />
+  <TypeAnimation
+    sequence={[
+      'sitios web impactantes',
+      1500,
+      'plataformas funcionales',
+      1500,
+      'experiencias personalizadas',
+      1500,
+      'sistemas a medida',
+      1500
+    ]}
+    wrapper="span"
+    speed={50}
+    repeat={Infinity}
+    className="font-bold text-secondary"
+  />
+</h1>
 
-        <p className="mb-10 text-base sm:text-lg md:text-xl max-w-2xl text-white/90">
-        Desarrollamos productos digitales centrados en el usuario, combinando diseño funcional y tecnología avanzada para generar soluciones de valor real.
-        </p>
 
-
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-          <a
-            href="/works"
-            className="btn-style4 px-6 py-3 text-base sm:text-md rounded-xl"
-          >
-            Ver proyectos
-          </a>
-
-          <a
-            href="/contact"
-            className="btn-style4 px-6 py-3 text-base sm:text-md rounded-xl"
-          >
-            Contacta conmigo
-          </a>
-        </div>
-      </div>
+        <p className="text-base sm:text-lg md:text-xl max-w-2xl text-white/90">
+        Tu negocio necesita presencia digital. Creamos soluciones que generan confianza, atraen clientes y mejoran tu rendimiento.        </p>
+      </motion.div>
     </section>
   );
 };
