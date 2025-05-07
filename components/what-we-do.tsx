@@ -20,6 +20,21 @@ const itemVariants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
+const services = [
+  {
+    title: "Páginas empresariales",
+    text: "Transmití confianza y profesionalismo con una web rápida y adaptada a tu negocio.",
+  },
+  {
+    title: "Invitaciones digitales",
+    text: "Una forma única y moderna de compartir momentos importantes, en segundos.",
+  },
+  {
+    title: "Ecommerce y apps",
+    text: "Vendé online, gestioná tus pedidos o digitalizá procesos. Nosotros lo desarrollamos.",
+  },
+];
+
 const WhatWeDo = () => (
   <section className="py-20 px-6 bg-secondary text-gray-800 text-center">
     <motion.div
@@ -28,7 +43,10 @@ const WhatWeDo = () => (
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.3 }}
     >
-    <h2 className="text-3xl sm:text-4xl font-bold mb-8">Lo que hacemos</h2>
+      <h2 className="text-3xl sm:text-4xl font-bold mb-4">Lo que podemos hacer por vos</h2>
+      <p className="text-gray-700 max-w-xl mx-auto mb-12">
+        Desde tu primera web hasta soluciones digitales a medida, te ayudamos a crecer con tecnología.
+      </p>
     </motion.div>
 
     <motion.div
@@ -38,26 +56,15 @@ const WhatWeDo = () => (
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
     >
-      {[
-        {
-          title: "Páginas empresariales",
-          text: "Mostrá tu empresa al mundo con una web sólida, rápida y moderna.",
-        },
-        {
-          title: "Invitaciones digitales",
-          text: "Personalizadas, interactivas y listas para compartir en segundos.",
-        },
-        {
-          title: "Ecommerce y apps",
-          text: "Tiendas online, apps móviles y sistemas de gestión a medida.",
-        },
-      ].map(({ title, text }, index) => (
+      {services.map(({ title, text }, index) => (
         <motion.div
           key={index}
           variants={itemVariants}
-          className="p-6 bg-white rounded-lg shadow-md  transition-all hover:bg-darkBg hover:text-white"
+          className="group p-6 bg-white rounded-lg shadow-md transition-all hover:bg-gray-900 hover:text-white"
         >
-          <h3 className="text-xl font-semibold mb-2">{title}</h3>
+          <h3 className="text-xl font-semibold mb-2 transition-colors group-hover:text-primary">
+            {title}
+          </h3>
           <p>{text}</p>
         </motion.div>
       ))}

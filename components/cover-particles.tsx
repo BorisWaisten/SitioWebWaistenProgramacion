@@ -23,6 +23,7 @@ export const CoverParticles = () => {
                 id="tsparticles"
                 options={{
                     fpsLimit: 120,
+
                     interactivity: {
                         events: {
                             onClick: {
@@ -69,7 +70,7 @@ export const CoverParticles = () => {
                             density: {
                                 enable: true,
                             },
-                            value: 80,
+                            value: 100,
                         },
                         opacity: {
                             value: 0.5,

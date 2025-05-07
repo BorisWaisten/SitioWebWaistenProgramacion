@@ -9,7 +9,7 @@ const Introduction = () => {
   return (
     <section
       aria-label="Introducción principal"
-      className="z-20 w-full min-h-screen  flex items-center justify-center px-4 py-12"
+      className=" z-20 w-full min-h-screen  flex items-center justify-center px-4 py-12"
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -18,17 +18,17 @@ const Introduction = () => {
         className="max-w-screen-lg text-center flex flex-col items-center"
       >
       <CoverParticles />
-<h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl leading-tight font-semibold text-white">
-  Creamos soluciones digitales <br />
+<h1 className="mb-6 z-10 text-3xl sm:text-4xl lg:text-5xl leading-tight font-semibold text-white">
+  Creamos<br />
   <TypeAnimation
     sequence={[
-      'sitios web impactantes',
+      'Sitios web impactantes',
       1500,
-      'plataformas funcionales',
+      'Plataformas funcionales',
       1500,
-      'experiencias personalizadas',
+      'Experiencias personalizadas',
       1500,
-      'sistemas a medida',
+      'Sistemas a medida',
       1500
     ]}
     wrapper="span"
@@ -39,8 +39,9 @@ const Introduction = () => {
 </h1>
 
 
-        <p className="text-base sm:text-lg md:text-xl max-w-2xl text-white/90">
-        Tu negocio necesita presencia digital. Creamos soluciones que generan confianza, atraen clientes y mejoran tu rendimiento.        </p>
+        <p className="z-10 text-base sm:text-lg md:text-xl max-w-2xl text-white/90">
+        Convertí tu idea en una solución digital que vende, conecta y te diferencia.
+        </p>
       </motion.div>
     </section>
   );
