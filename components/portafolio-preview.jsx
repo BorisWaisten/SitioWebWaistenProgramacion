@@ -33,7 +33,7 @@ const portfolioItems = [
 
 const PortfolioPreview = () => {
   return (
-    <section className="py-20  px-6 bg-secondary text-primaryText text-center">
+    <section className="py-20  px-6 bg-white text-primaryText text-center">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -81,9 +81,9 @@ const PortfolioPreview = () => {
       </Swiper>
 
 
-        <a href="/works" className="mt-8 inline-block btn-style4 px-6 py-3 text-lg rounded-xl">
-        Hablemos
-      </a>
+        <a href="/works" className="mt-8 inline-block bg-primaryText btn-style4 px-6 py-3 text-lg rounded-xl">
+          Proyectos
+        </a>
       </motion.div>
 
     </section>

@@ -45,25 +45,7 @@ const WhyDigital = () => (
         </div>
       </div>
 
-      {/* Nuevo gráfico con rubros de eCommerce */}
-      <div className="mt-16 max-w-5xl mx-auto">
-        <h3 className="text-xl font-semibold mb-4">
-          ¿Qué rubros ya están vendiendo online?
-        </h3>
-        <ResponsiveContainer width="100%" height={400}>
-          <BarChart data={data} layout="vertical" margin={{ left: 60 }}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis type="number" domain={[0, 100]} tickFormatter={(val) => `${val}%`} />
-            <YAxis type="category" dataKey="rubro" />
-            <Tooltip formatter={(value) => `${value}% de empresas en este rubro`} />
-            <Bar dataKey="porcentaje" fill="#82ca9d" name="Presencia online" />
-          </BarChart>
-        </ResponsiveContainer>
-      </div>
 
-      <p className="mt-8 text-sm text-gray-600">
-        Fuente: Informe Anual de Tendencias en eCommerce 2024 – CACE.
-      </p>
     </motion.div>
   </section>
 );

@@ -11,13 +11,13 @@ const Introduction = () => {
       aria-label="Introducción principal"
       className=" z-20 w-full min-h-screen  flex items-center justify-center px-4 py-12"
     >
+      <CoverParticles />
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className="max-w-screen-lg text-center flex flex-col items-center"
       >
-      <CoverParticles />
 <h1 className="mb-6 z-10 text-3xl sm:text-4xl lg:text-5xl leading-tight font-semibold text-white">
   Creamos<br />
   <TypeAnimation
