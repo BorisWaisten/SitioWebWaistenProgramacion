@@ -12,15 +12,13 @@ const developers = [
     role: "Full Stack Developer",
     description:
       "Analista de Sistemas recibido en el Instituto Tecnológico ORT.",
-    quote: "Me inspira construir soluciones simples a problemas complejos.",
   },
   {
     name: "Lucas",
     image: "/lucas2.jpg",
-    role: "Backend & DevOps",
+    role: "Full Stack Developer",
     description:
       "Ingeniero Informático recibido en la Universidad de Buenos Aires.",
-    quote: "Disfruto optimizar procesos y ver cómo todo encaja como un puzzle.",
   },
 ];
 
@@ -73,9 +71,7 @@ const AboutMePage = () => {
                 <h2 className="text-xl font-bold text-white">{dev.name}</h2>
                 <h3 className="text-secondary font-medium">{dev.role}</h3>
                 <p className="text-white/70 text-sm mt-2">{dev.description}</p>
-                <blockquote className="italic text-white/50 text-sm mt-4">
-                  “{dev.quote}”
-                </blockquote>
+
               </motion.div>
             </div>
           </div>
