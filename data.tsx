@@ -1,5 +1,5 @@
 
-import { Instagram,BookText, CodeSquare, HomeIcon, Linkedin,  PhoneCallIcon, Pencil, Computer, Book, Rocket, Speech, CarFront, AreaChart, StoreIcon, ScrollIcon } from "lucide-react";
+import { Instagram,BookText,Server, CodeSquare, HomeIcon, Linkedin,  PhoneCallIcon, Pencil, Computer, Book, Rocket, Speech, CarFront, AreaChart, StoreIcon, ScrollIcon } from "lucide-react";
 
 export const socialNetworks = [
     // {
@@ -33,6 +33,12 @@ export const itemsNavbar = [
         title: "Trabajos",
         icon: <CodeSquare size={25} color="#fff" strokeWidth={1} />,
         link: "/works",
+    },
+    {
+        id: 3,
+        title: "Diseño Web",
+        icon: <Server size={25} color="#fff" strokeWidth={1} />,
+        link: "https://design.waistenprogramacion.com.ar/",
     },
     {
         id: 5,

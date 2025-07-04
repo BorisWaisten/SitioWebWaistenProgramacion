@@ -4,78 +4,96 @@ import Image from "next/image";
 import ContainerPage from "@/components/container-page";
 import { MotionTransition } from "@/components/transition-component";
 import { motion } from "framer-motion";
+import { Star } from "lucide-react";
 
 const developers = [
   {
     name: "Boris Waisten",
     image: "/BORIS 2.png",
     role: "Full Stack Developer",
-    description:
-      "Analista de Sistemas recibido en el Instituto Tecnológico ORT.",
+    education: "Analista de Sistemas - Instituto Tecnológico ORT",
   },
   {
-    name: "Lucas",
+    name: "Lucas Waisten",
     image: "/lucas2.jpg",
     role: "Full Stack Developer",
-    description:
-      "Ingeniero Informático recibido en la Universidad de Buenos Aires.",
+    education: "Ingeniero Informático - Universidad de Buenos Aires",
   },
 ];
 
 const AboutMePage = () => {
   return (
     <ContainerPage>
-      <MotionTransition position="bottom">
-        <h1 className="text-3xl md:text-5xl text-center font-bold mb-12">
-          Somos{" "}
-          <span className="text-secondary">desarrolladores comprometidos</span>
-        </h1>
-      </MotionTransition>
+      <div className="container-custom section-padding">
+        {/* Hero Section */}
+        <MotionTransition position="bottom">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+              Somos{" "}
+              <span className="gradient-text">hermanos gemelos</span>{" "}
+              apasionados por crear
+            </h1>
+            
+            <p className="text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+              Combinamos nuestras habilidades únicas para transformar visiones en realidad digital.
+            </p>
+          </div>
+        </MotionTransition>
 
-      <MotionTransition position="bottom">
-        <section className="text-center max-w-3xl mx-auto mb-16 text-white/80 text-lg">
-          <p>
-            Somos hermanos gemelos, apasionados por la programación y la
-            tecnología. Combinamos nuestras habilidades para crear soluciones
-            digitales modernas, funcionales y con propósito.
-          </p>
-        </section>
-      </MotionTransition>
+        {/* Equipo */}
+        <MotionTransition position="bottom">
+          <div className="mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+              Conocé al{" "}
+              <span className="gradient-text">equipo</span>{" "}
+              detrás de cada proyecto
+            </h2>
+            
+            <div className="grid gap-12 lg:grid-cols-2">
+              {developers.map((dev, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="card group"
+                >
+                  <div className="flex flex-col lg:flex-row gap-8">
+                    {/* Imagen */}
+                    <div className="relative w-full lg:w-48 h-64 lg:h-48 overflow-hidden rounded-2xl">
+                      <Image
+                        src={dev.image}
+                        alt={dev.name}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                    </div>
 
-      <div className="grid gap-10 mb-5 md:grid-cols-2">
-        {developers.map((dev, index) => (
-          <div
-            key={index}
-            className="relative w-full max-w-sm h-[400px] mx-auto overflow-hidden rounded-xl shadow-xl group"
-          >
-            {/* Imagen */}
-            <div className="relative h-full">
-              <Image
-                src={dev.image}
-                alt={dev.name}
-                fill
-                className="object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
-              />
-              {/* Capa oscura */}
-              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition-colors duration-500 rounded-xl" />
-            </div>
-
-            {/* Información de desarrollador */}
-            <div className="absolute bottom-0 w-full bg-transparent backdrop-blur-sm p-4 rounded-t-xl transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 text-center">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                <h2 className="text-xl font-bold text-white">{dev.name}</h2>
-                <h3 className="text-secondary font-medium">{dev.role}</h3>
-                <p className="text-white/70 text-sm mt-2">{dev.description}</p>
-
-              </motion.div>
+                    {/* Información */}
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Star className="w-5 h-5 text-yellow-500" />
+                        <h3 className="text-2xl font-bold text-neutral-100">
+                          {dev.name}
+                        </h3>
+                      </div>
+                      
+                      <p className="text-primary-400 font-semibold mb-2">
+                        {dev.role}
+                      </p>
+                      
+                      <p className="text-neutral-400 text-sm">
+                        {dev.education}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
-        ))}
+        </MotionTransition>
       </div>
     </ContainerPage>
   );

@@ -5,43 +5,41 @@ import { useEffect, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 
-export const CoverParticles = () => {
+interface CoverParticlesProps {
+    enabled?: boolean;
+}
+
+export const CoverParticles = ({ enabled = false }: CoverParticlesProps) => {
     const [init, setInit] = useState(false);
 
     useEffect(() => {
-        initParticlesEngine(async (engine) => {
-            await loadSlim(engine);
-        }).then(() => {
-            setInit(true);
-        });
-    }, []);
+        if (enabled) {
+            initParticlesEngine(async (engine) => {
+                await loadSlim(engine);
+            }).then(() => {
+                setInit(true);
+            });
+        }
+    }, [enabled]);
+
+    // Solo renderizar si está habilitado y inicializado
+    if (!enabled || !init) {
+        return null;
+    }
 
     return (
-        init &&
-        <div className="w-[0px]">
+        <div className="absolute inset-0 pointer-events-none">
             <Particles
                 id="tsparticles"
                 options={{
                     fpsLimit: 120,
-
                     interactivity: {
                         events: {
                             onClick: {
-                                enable: true,
-                                mode: "push",
+                                enable: false, // Deshabilitado para evitar interferencias
                             },
                             onHover: {
-                                enable: true,
-                                mode: "repulse",
-                            },
-                        },
-                        modes: {
-                            push: {
-                                quantity: 4,
-                            },
-                            repulse: {
-                                distance: 200,
-                                duration: 0.4,
+                                enable: false, // Deshabilitado para evitar interferencias
                             },
                         },
                     },
@@ -53,7 +51,7 @@ export const CoverParticles = () => {
                             color: "#ffffff",
                             distance: 150,
                             enable: true,
-                            opacity: 0.5,
+                            opacity: 0.3, // Reducida la opacidad
                             width: 1,
                         },
                         move: {
@@ -63,29 +61,28 @@ export const CoverParticles = () => {
                                 default: "bounce",
                             },
                             random: false,
-                            speed: 1,
+                            speed: 0.5, // Velocidad reducida
                             straight: false,
                         },
                         number: {
                             density: {
                                 enable: true,
                             },
-                            value: 100,
+                            value: 50, // Menos partículas
                         },
                         opacity: {
-                            value: 0.5,
+                            value: 0.3, // Opacidad reducida
                         },
                         shape: {
                             type: "circle",
                         },
                         size: {
-                            value: { min: 1, max: 5 },
+                            value: { min: 1, max: 3 }, // Tamaño reducido
                         },
                     },
                     detectRetina: true,
                 }}
-
             />
         </div>
-    )
+    );
 };

@@ -19,7 +19,7 @@ const data = [
 ];
 
 const WhyDigital = () => (
-  <section className="py-20 px-6 bg-white text-primaryText text-center">
+  <section className="py-20 px-6 bg-primary-200 text-secondary-900 text-center">
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
