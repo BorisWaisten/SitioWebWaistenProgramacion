@@ -36,7 +36,7 @@ export const itemsNavbar = [
     },
     {
         id: 3,
-        title: "Diseño Web",
+        title: "Diseño Grafico",
         icon: <Server size={25} color="#fff" strokeWidth={1} />,
         link: "https://design.waistenprogramacion.com.ar/",
     },
@@ -80,6 +80,27 @@ export const serviceData = [
 ];
 
 export const dataPortfolio = [
+    {
+        id: 6,
+        title: "Pagina Estudio Diseño Grafico",
+        image: "/webEstudio.png",
+        urlGithub: "https://github.com/BorisWaisten/proyect-apicola",
+        urlDemo: "https://design.waistenprogramacion.com.ar/",
+    },
+    {
+        id: 7,
+        title: "Pagina Camara de Economia Regional",
+        image: "/webCamara.png",
+        urlGithub: "https://github.com/BorisWaisten/proyect-apicola",
+        urlDemo: "https://www.acrearg.com/",
+    },
+    {
+        id: 8,
+        title: "Invitacion de Boda",
+        image: "/webBoda2.png",
+        urlGithub: "https://github.com/BorisWaisten/proyect-apicola",
+        urlDemo: "https://boda-syd.vercel.app/",
+    },
     {
         id:1,
         title:"Plataforma de Streaming",

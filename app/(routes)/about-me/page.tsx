@@ -19,6 +19,12 @@ const developers = [
     role: "Full Stack Developer",
     education: "Ingeniero Informático - Universidad de Buenos Aires",
   },
+  {
+    name: "Martina Waisten",
+    image: "/perfilMartu.jpg",
+    role: "Diseñadora Grafica",
+    education: "Diseño Grafico - Fundación Altos Estudios",
+  },
 ];
 
 const AboutMePage = () => {
@@ -30,8 +36,8 @@ const AboutMePage = () => {
           <div className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               Somos{" "}
-              <span className="gradient-text">hermanos gemelos</span>{" "}
-              apasionados por crear
+              <span className="gradient-text">hermanos</span>{" "}
+              apasionados por la tecnologia
             </h1>
             
             <p className="text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
