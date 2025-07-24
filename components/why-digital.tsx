@@ -32,16 +32,16 @@ const WhyDigital = () => (
 
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <div>
-          <h3 className="text-xl font-semibold mb-2">Más ventas</h3>
-          <p>Tu rubro ya está vendiendo online. No te quedes afuera.</p>
+          <h3 className="text-xl  font-semibold mb-2">Más ventas</h3>
+          <p className="text-balance">Tu rubro ya está vendiendo online. No te quedes afuera.</p>
         </div>
         <div>
           <h3 className="text-xl font-semibold mb-2">Automatización</h3>
-          <p>Ahorra tiempo y dinero con sistemas que trabajan por vos.</p>
+          <p className="text-balance">Ahorra tiempo y dinero con sistemas que trabajan por vos.</p>
         </div>
         <div>
           <h3 className="text-xl font-semibold mb-2">Imagen profesional</h3>
-          <p>Generá confianza desde el primer clic con un sitio moderno.</p>
+          <p className="text-balance">Generá confianza desde el primer clic con un sitio moderno.</p>
         </div>
       </div>
 

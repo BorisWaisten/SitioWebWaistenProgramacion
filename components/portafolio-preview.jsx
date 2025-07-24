@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { ExternalLink, Calendar, Users, TrendingUp, ArrowRight } from "lucide-react";
-
+import Image from "next/image";  
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -83,7 +83,7 @@ const PortfolioPreview = () => {
             <span className="gradient-text">inspiran</span> y convierten
           </h2>
           
-          <p className="text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-neutral-300 text-balance max-w-3xl mx-auto leading-relaxed">
             Cada proyecto es una historia de éxito. Diseños únicos y funcionales 
             que ayudaron a nuestros clientes a alcanzar sus objetivos digitales.
           </p>
@@ -140,9 +140,11 @@ const PortfolioPreview = () => {
                         
                         {/* Imagen del proyecto */}
                         <div className="relative overflow-hidden rounded-b-2xl">
-                          <img
+                          <Image
                             src={item.image}
                             alt={item.title}
+                            width={500}
+                            height={500}
                             className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                           />
                           
@@ -176,7 +178,7 @@ const PortfolioPreview = () => {
                       </a>
                     </div>
                     
-                    <p className="text-neutral-400 mb-4 leading-relaxed">
+                    <p className="text-neutral-400 mb-4 text-balance leading-relaxed">
                       {item.description}
                     </p>
 

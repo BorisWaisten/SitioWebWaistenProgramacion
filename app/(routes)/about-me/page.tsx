@@ -21,7 +21,7 @@ const developers = [
   },
   {
     name: "Martina Waisten",
-    image: "/perfilMartu.jpg",
+    image: "/perfilMartu.png",
     role: "Diseñadora Grafica",
     education: "Diseño Grafico - Fundación Altos Estudios",
   },
@@ -39,22 +39,12 @@ const AboutMePage = () => {
               <span className="gradient-text">hermanos</span>{" "}
               apasionados por la tecnologia
             </h1>
-            
-            <p className="text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
-              Combinamos nuestras habilidades únicas para transformar visiones en realidad digital.
-            </p>
           </div>
         </MotionTransition>
 
         {/* Equipo */}
         <MotionTransition position="bottom">
           <div className="mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-              Conocé al{" "}
-              <span className="gradient-text">equipo</span>{" "}
-              detrás de cada proyecto
-            </h2>
-            
             <div className="grid gap-12 lg:grid-cols-2">
               {developers.map((dev, index) => (
                 <motion.div

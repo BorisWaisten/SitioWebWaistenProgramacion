@@ -131,7 +131,7 @@ const WhatWeDo = () => {
           <span className="gradient-text">transforman</span> tu negocio
         </h2>
         
-        <p className="text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl text-balance  text-neutral-300 max-w-3xl mx-auto leading-relaxed">
           Desde sitios web profesionales hasta aplicaciones complejas, 
           creamos soluciones que impulsan el crecimiento de tu empresa.
         </p>
@@ -168,7 +168,7 @@ const WhatWeDo = () => {
                     {service.title}
                   </h3>
                   
-                  <p className="text-neutral-400 mb-4 leading-relaxed">
+                  <p className="text-neutral-400 text-balance mb-4 leading-relaxed">
                     {service.description}
                   </p>
                   
@@ -202,7 +202,7 @@ const WhatWeDo = () => {
           <h3 className="text-2xl font-bold mb-4 text-neutral-100">
             ¿No encontrás lo que buscás?
           </h3>
-          <p className="text-neutral-400 mb-6 max-w-2xl mx-auto">
+          <p className="text-neutral-400 text-balance mb-6 max-w-2xl mx-auto">
             Cada proyecto es único. Contame tu idea y te ayudo a encontrar la solución perfecta para tu negocio.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -81,7 +81,7 @@ const Introduction = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg sm:text-xl lg:text-2xl text-neutral-300 max-w-3xl mx-auto mb-12 leading-relaxed"
+            className="text-lg text-balance sm:text-xl lg:text-2xl text-neutral-300 max-w-3xl mx-auto mb-12 leading-relaxed"
           >
             Creamos sitios web modernos, funcionales y que convierten visitantes en clientes. 
             <span className="text-primary-400 font-semibold"> Tu éxito digital comienza aquí.</span>
