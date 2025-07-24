@@ -11,48 +11,28 @@ import "swiper/css/navigation";
 
 const portfolioItems = [
   {
-    title: "EcoStore - Tienda Online",
-    image: "/webEco.png",
-    description: "Plataforma de e-commerce moderna con gestión completa de productos, pagos seguros y panel administrativo.",
-    category: "E-commerce",
-    year: "2024",
-    technologies: ["React", "Node.js", "Stripe", "MongoDB"],
-    features: ["Carrito de compras", "Pasarela de pagos", "Panel admin", "SEO optimizado"],
-    link: "#",
-    client: "EcoStore"
-  },
-  {
-    title: "Digital Wedding - Invitación Digital",
-    image: "/webBoda.png",
-    description: "Experiencia digital interactiva para compartir momentos especiales con diseño personalizado y animaciones.",
-    category: "Landing Page",
-    year: "2024",
-    technologies: ["Next.js", "Framer Motion", "Tailwind CSS"],
-    features: ["Diseño responsivo", "Animaciones", "Formulario RSVP", "Galería de fotos"],
-    link: "#",
-    client: "Boda Personal"
-  },
-  {
-    title: "Business Manager - Sistema de Gestión",
-    image: "/webGestion.png",
-    description: "Aplicación web completa para automatizar procesos empresariales y optimizar la gestión interna.",
-    category: "Aplicación Web",
-    year: "2024",
-    technologies: ["Vue.js", "Laravel", "MySQL", "Redis"],
-    features: ["Dashboard analítico", "Gestión de usuarios", "Reportes automáticos", "API REST"],
-    link: "#",
-    client: "Empresa Privada"
-  },
-  {
-    title: "StreamHub - Plataforma de Streaming",
+    title: "Plataforma de Streaming",
     image: "/webTriduo.png",
-    description: "Sitio web profesional para contenidos audiovisuales con sistema de suscripciones y reproducción HD.",
-    category: "Plataforma Web",
-    year: "2024",
-    technologies: ["React", "Firebase", "Vimeo API", "Stripe"],
-    features: ["Reproductor HD", "Sistema de suscripciones", "Contenido premium", "Analytics"],
-    link: "#",
-    client: "StreamHub"
+    description: "Plataforma de streaming con sistema de donaciones y reproduccion de videos",
+    link: "https://hemosvistosugloria.op.org.ar/",
+  },
+  {
+    title: "Estudio de Diseño Gráfico",
+    image: "/webEstudioGrafico.png",
+    description: "Sitio web profesional para estudio de diseño grafico",
+    link: "https://design.waistenprogramacion.com.ar/",
+  },
+  {
+    title: "Tienda Online",
+    image: "/webEco.png",
+    description: "Demo de e-commerce moderna con gestión completa de productos",
+    link: "https://ecommerce-app-bw.vercel.app/",
+  },
+  {
+    title: "Invitación Digital",
+    image: "/webBoda2.png",
+    description: "Invitacion digital para bodas",
+    link: "https://boda-syd.vercel.app/",
   },
 ];
 
@@ -145,7 +125,7 @@ const PortfolioPreview = () => {
                             alt={item.title}
                             width={500}
                             height={500}
-                            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                            className="w-full h-48 object-fill group-hover:scale-105 transition-transform duration-500"
                           />
                           
                           {/* Overlay con información */}
@@ -181,42 +161,6 @@ const PortfolioPreview = () => {
                     <p className="text-neutral-400 mb-4 text-balance leading-relaxed">
                       {item.description}
                     </p>
-
-                    {/* Tecnologías */}
-                    <div className="mb-4">
-                      <div className="flex flex-wrap gap-2">
-                        {item.technologies.map((tech, techIndex) => (
-                          <span 
-                            key={techIndex}
-                            className="px-2 py-1 bg-primary-500/10 text-primary-400 text-xs rounded-full border border-primary-500/20"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Características */}
-                    <div className="space-y-2 mb-6">
-                      {item.features.slice(0, 3).map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center gap-2 text-sm text-neutral-500">
-                          <div className="w-1.5 h-1.5 bg-primary-500 rounded-full"></div>
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Cliente y año */}
-                    <div className="flex items-center justify-between text-sm text-neutral-500">
-                      <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
-                        <span>{item.client}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        <span>{item.year}</span>
-                      </div>
-                    </div>
                   </div>
 
                   {/* Indicador de hover */}

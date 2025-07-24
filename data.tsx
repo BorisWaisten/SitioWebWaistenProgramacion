@@ -18,31 +18,19 @@ export const socialNetworks = [
 export const itemsNavbar = [
     {
         id: 1,
-        title: "Inicio",
+        title: "inicio",
         icon: <HomeIcon size={25} color="#fff" strokeWidth={1} />,
         link: "/",
     },
     {
-        id: 2,
-        title: "Sobre Nosotros",
-        icon: <Pencil size={25} color="#fff" strokeWidth={1} />,
-        link: "/about-me",
-    },
-    {
         id: 4,
-        title: "Trabajos",
+        title: "trabajos",
         icon: <CodeSquare size={25} color="#fff" strokeWidth={1} />,
         link: "/works",
     },
     {
-        id: 3,
-        title: "Diseño Grafico",
-        icon: <Server size={25} color="#fff" strokeWidth={1} />,
-        link: "https://design.waistenprogramacion.com.ar/",
-    },
-    {
         id: 5,
-        title: "Contacto",
+        title: "contacto",
         icon: <PhoneCallIcon size={25} color="#fff" strokeWidth={1} />,
         link: "/contact",
     }
@@ -83,7 +71,7 @@ export const dataPortfolio = [
     {
         id: 6,
         title: "Pagina Estudio Diseño Grafico",
-        image: "/webEstudio.png",
+        image: "/webEstudioGráfico.png",
         urlGithub: "https://github.com/BorisWaisten/proyect-apicola",
         urlDemo: "https://design.waistenprogramacion.com.ar/",
     },
