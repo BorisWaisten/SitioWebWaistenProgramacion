@@ -10,7 +10,6 @@ export default function Home() {
     <main className="min-h-screen relative bg-gradient-to-b from-[#0c1a1a] to-[#1c3d5a]">
       <Image src="/fondo.jpg" alt="Background" width={1000} height={1000} className="absolute sm:fixed sm:w-full inset-0 top-0  h-[115vh] sm:h-full sm:object-cover opacity-50" />
       
-      {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
         <div className="container mx-auto text-center relative z-10">
           <motion.div
@@ -26,20 +25,7 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl flex flex-col md:flex-row items-center justify-center font-bold relative leading-tight"
               >
-                <span className="text-[#48bfda] relative pr-0 md:pr-1 pb-1 md:pb-2">
-                  Waisten
-                  {/* Efecto glitch base */}
-                  <span className="absolute inset-0 text-[#48bfda] animate-glitch-1 opacity-0"></span>
-                  <span className="absolute inset-0 text-[#6acfc7] animate-glitch-2 opacity-0"></span>
-                  <span className="absolute inset-0 text-gray-800 animate-glitch-3 opacity-0"></span>
-                </span>
-                <span className="pb-1 md:pb-2 bg-gradient-to-r from-[#48bfda] to-[#6acfc7] bg-clip-text text-transparent relative">
-                  Programación
-                  {/* Efecto glitch para "Programación" */}
-                  <span className="absolute inset-0 text-[#48bfda] animate-glitch-1-delayed opacity-0"></span>
-                  <span className="absolute inset-0 text-[#6acfc7] animate-glitch-2-delayed opacity-0"></span>
-                  <span className="absolute inset-0 text-[#48bfda] animate-glitch-3-delayed opacity-0"></span>
-                </span>
+                <Image src="/Logo.2.svg" alt="Logo" width={100} height={100} className="md:w-[400px] " />
               </motion.h1>
             </div>
             
@@ -49,7 +35,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-lg sm:text-xl md:text-2xl text-[#48bfda] mb-8 md:mb-8 max-w-3xl mx-auto px-4"
             >
-              Estudio de desarrolladores software
+              Estudio de desarrollo de software
             </motion.p>
           </motion.div>
         </div>
@@ -75,23 +61,23 @@ export default function Home() {
                   <span className="text-xl md:text-2xl">💻</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-white mb-2">Desarrollo Web</h3>
-                <p className="text-sm md:text-base text-neutral-400 text-balance px-2">Sitios modernos y responsivos</p>
+                <p className="text-sm md:text-base text-neutral-400 text-center px-2">Sitios modernos y responsivos</p>
               </div>
               
               <div className="text-center">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#48bfda] to-[#6acfc7] rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
-                  <span className="text-xl md:text-2xl">🎨</span>
+                  <span className="text-xl md:text-2xl">🎉</span>
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-white mb-2">Diseño UX/UI</h3>
-                <p className="text-sm md:text-base text-neutral-400 text-balance px-2">Experiencias de usuario intuitivas</p>
+                <h3 className="text-lg md:text-xl font-semibold text-white mb-2">Invitaciones digitales</h3>
+                <p className="text-sm md:text-base text-neutral-400 text-center px-2">Invitaciones para eventos, cumpleaños, etc.</p>
               </div>
               
               <div className="text-center sm:col-span-2 md:col-span-1">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#48bfda] to-[#6acfc7] rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
                   <span className="text-xl md:text-2xl">⚡</span>
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-white mb-2">Optimización</h3>
-                <p className="text-sm md:text-base text-neutral-400 text-balance px-2">Rendimiento y velocidad</p>
+                <h3 className="text-lg md:text-xl font-semibold text-white mb-2">Desarrollo de sistemas de gestión</h3>
+                <p className="text-sm md:text-base text-neutral-400 text-center px-2">Sistemas personalizados con IA</p>
               </div>
             </div>
 

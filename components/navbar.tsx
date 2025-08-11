@@ -36,11 +36,11 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image 
-              src="/logo.svg" 
+              src="/icono1.svg" 
               alt="Waisten Programación" 
               width={32} 
               height={32} 
-              className="mr-2 md:w-40  md:h-40"
+              className="mr-2 md:w-[50px] "
             />
           </Link>
 

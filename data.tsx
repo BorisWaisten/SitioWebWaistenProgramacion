@@ -117,12 +117,5 @@ export const dataPortfolio = [
         urlGithub: "https://github.com/BorisWaisten/invitacion-boda",
         urlDemo: "https://martuygino.vercel.app/",
     },
-    {
-        id: 4,
-        title: "Sitio gestion de ventas",
-        image: "/webGestion.png",
-        urlGithub: "#!",
-        urlDemo: "https://gestiondeventadonatella.vercel.app/",
-    }
 ];
 
