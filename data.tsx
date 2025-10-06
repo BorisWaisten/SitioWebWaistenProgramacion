@@ -69,6 +69,20 @@ export const serviceData = [
 
 export const dataPortfolio = [
     {
+        id: 9,
+        title: "Pagina Movimiento Vida en Gracia",
+        image: "/webMvg.png",
+        urlGithub: "https://github.com/LucasWaisten/mvg",
+        urlDemo: "https://mvg.com.ar/",
+    },
+    {
+        id: 10,
+        title: "Invitacion de Boda",
+        image: "/webBoda3.png",
+        urlGithub: "https://github.com/BorisWaisten/boda-fran-stefi",
+        urlDemo: "https://boda-fran-stefi.vercel.app/",
+    },
+    {
         id: 6,
         title: "Pagina Estudio Diseño Grafico",
         image: "/webEstudioGráfico.png",
