@@ -51,10 +51,10 @@ export interface ServiceRepository {
 }
 
 export interface AnimationConfig {
-  initial: object;
-  animate: object;
-  transition: object;
-  viewport?: object;
+  initial: any;
+  animate: any;
+  transition: any;
+  viewport?: any;
 }
 
 export interface ThemeConfig {
