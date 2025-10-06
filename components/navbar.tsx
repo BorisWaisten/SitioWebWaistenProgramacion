@@ -38,9 +38,9 @@ const Navbar = () => {
             <Image 
               src="/icono1.svg" 
               alt="Waisten Programación" 
-              width={32} 
-              height={32} 
-              className="mr-2 md:w-[50px] "
+              width={30} 
+              height={30} 
+              className="mr-2  md:w-[50px]"
             />
           </Link>
 
