@@ -11,6 +11,8 @@ interface ButtonProps {
   className?: string;
   showArrow?: boolean;
   external?: boolean;
+  type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
 }
 
 export default function Button({
@@ -22,6 +24,8 @@ export default function Button({
   className = '',
   showArrow = false,
   external = false,
+  type = 'button',
+  disabled = false,
 }: ButtonProps) {
   const baseClasses = 'inline-flex items-center gap-2 font-semibold transition-all duration-300';
   
@@ -62,7 +66,12 @@ export default function Button({
   }
 
   return (
-    <button onClick={onClick} className={classes}>
+    <button 
+      type={type}
+      disabled={disabled}
+      onClick={onClick} 
+      className={classes}
+    >
       {content}
     </button>
   );
