@@ -113,7 +113,7 @@ export default function About() {
               <div className="flex items-start gap-3 mt-6">
                 <Lightbulb className="w-6 h-6 text-[#6acfc7] mt-1 flex-shrink-0" />
                 <p className="italic text-[#6acfc7]">
-                  "Ver el fruto de ese razonamiento plasmado en algo digital es lo que me motiva cada día"
+                  &ldquo;Ver el fruto de ese razonamiento plasmado en algo digital es lo que me motiva cada día&rdquo;
                 </p>
               </div>
             </div>
