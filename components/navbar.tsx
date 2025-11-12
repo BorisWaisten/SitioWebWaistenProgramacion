@@ -23,6 +23,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: "inicio", href: "/" },
+    { name: "sobre mi", href: "/about" },
     { name: "proyectos", href: "/works" },
     { name: "contacto", href: "/contact" },
   ];

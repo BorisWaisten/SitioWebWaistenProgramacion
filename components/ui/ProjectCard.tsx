@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import { Project } from '@/types';
 
@@ -24,7 +24,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3 md:gap-4">
+        <div className="absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <a
             href={project.urlDemo}
             target="_blank"
@@ -33,16 +33,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           >
             <ExternalLink className="w-4 h-4 md:w-5 md:h-5 text-white" />
           </a>
-          {project.urlGithub !== "#!" && (
-            <a
-              href={project.urlGithub}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#6acfc7]/20 backdrop-blur-sm p-2 md:p-3 rounded-full hover:bg-[#6acfc7]/30 transition-colors"
-            >
-              <Github className="w-4 h-4 md:w-5 md:h-5 text-white" />
-            </a>
-          )}
         </div>
       </div>
 
@@ -51,26 +41,14 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         <h3 className="text-lg md:text-xl font-semibold text-white mb-3">
           {project.title}
         </h3>
-        <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
-          <a
-            href={project.urlDemo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 bg-gradient-to-r from-[#48bfda] to-[#6acfc7] text-white py-2 px-3 md:px-4 rounded-lg text-center hover:from-[#0c5972] hover:to-[#48bfda] transition-all duration-300 text-sm md:text-base"
-          >
-            Ver Demo
-          </a>
-          {project.urlGithub !== "#!" && (
-            <a
-              href={project.urlGithub}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 bg-[#1c3d5a] text-white py-2 px-3 md:px-4 rounded-lg text-center hover:bg-[#0c5972] transition-all duration-300 border border-[#48bfda]/30 text-sm md:text-base"
-            >
-              Código
-            </a>
-          )}
-        </div>
+        <a
+          href={project.urlDemo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full bg-gradient-to-r from-[#48bfda] to-[#6acfc7] text-white py-2 px-3 md:px-4 rounded-lg text-center hover:from-[#0c5972] hover:to-[#48bfda] transition-all duration-300 text-sm md:text-base"
+        >
+          Link al proyecto
+        </a>
       </div>
     </motion.div>
   );
