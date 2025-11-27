@@ -1,5 +1,6 @@
 import type { Metadata as NextMetadata } from "next";
 import { Urbanist } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 
 import "./globals.css";
 import 'swiper/css';
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className={urbanist.className}>
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
