@@ -47,7 +47,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           rel="noopener noreferrer"
           className="block w-full bg-gradient-to-r from-[#48bfda] to-[#6acfc7] text-white py-2 px-3 md:px-4 rounded-lg text-center hover:from-[#0c5972] hover:to-[#48bfda] transition-all duration-300 text-sm md:text-base"
         >
-          Link al proyecto
+          Link
         </a>
       </div>
     </motion.div>
