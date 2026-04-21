@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata as NextMetadata } from "next";
 import { Urbanist } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 
 import "./globals.css";
 import 'swiper/css';
@@ -7,12 +8,17 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 import Navbar from "@/components/navbar";
-import Header from "@/components/header";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
+type Metadata = NextMetadata & {
+  image: string;
+}
+
 export const metadata: Metadata = {
-  title: "Sitio Web Waisten Programación",
+  title: "Waisten Programación",
+  description: "Servicios de programación",
+  image: "/favicon.ico",
 };
 
 export default function RootLayout({
@@ -24,8 +30,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={urbanist.className}>
         <Navbar />
-        <Header />
         {children}
+        <Analytics />
       </body>
     </html>
   );

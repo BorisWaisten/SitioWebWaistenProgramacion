@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1186.6 770.66">
+  <defs>
+    <style>
+      .cls-1 {
+        mask: url(#mask-1);
+      }
+
+      .cls-2 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-2, .cls-3 {
+        mix-blend-mode: multiply;
+      }
+
+      .cls-4 {
+        mask: url(#mask);
+      }
+
+      .cls-5 {
+        isolation: isolate;
+      }
+
+      .cls-6 {
+        fill: url(#radial-gradient-2);
+      }
+
+      .cls-7 {
+        fill: #25353a;
+      }
+
+      .cls-8 {
+        fill: url(#Degradado_sin_nombre_3);
+      }
+
+      .cls-9 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-10 {
+        filter: url(#luminosity-noclip);
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_3" data-name="Degradado sin nombre 3" x1="869.92" y1="-346.56" x2="1500.38" y2="-346.56" gradientTransform="translate(146.12 1465.73) rotate(-35)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#25353a"/>
+      <stop offset="1" stop-color="#4bbfda"/>
+    </linearGradient>
+    <filter id="luminosity-noclip" x="737.43" y="331.98" width="418.63" height="418.62" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <filter id="luminosity-noclip-2" x="737.43" y="-8693.89" width="418.63" height="32766" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <mask id="mask-1" x="737.43" y="-8693.89" width="418.63" height="32766" maskUnits="userSpaceOnUse"/>
+    <radialGradient id="radial-gradient" cx="948.13" cy="542.38" fx="948.13" fy="542.38" r="206.48" gradientTransform="translate(-14.38 -8.53) scale(1.01)" gradientUnits="userSpaceOnUse">
+      <stop offset=".43" stop-color="#fff"/>
+      <stop offset=".53" stop-color="#fcfcfc"/>
+      <stop offset=".61" stop-color="#f2f2f2"/>
+      <stop offset=".68" stop-color="#e2e2e2"/>
+      <stop offset=".74" stop-color="#cbcbcb"/>
+      <stop offset=".8" stop-color="#aeaeae"/>
+      <stop offset=".85" stop-color="#8a8a8a"/>
+      <stop offset=".91" stop-color="#606060"/>
+      <stop offset=".96" stop-color="#303030"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+    <mask id="mask" x="737.43" y="331.98" width="418.63" height="418.62" maskUnits="userSpaceOnUse">
+      <g class="cls-10">
+        <g class="cls-1">
+          <path class="cls-2" d="M737.43,541.29c0,115.6,93.72,209.3,209.32,209.3s209.31-93.71,209.31-209.3-93.72-209.31-209.31-209.31-209.32,93.71-209.32,209.31Z"/>
+        </g>
+      </g>
+    </mask>
+    <radialGradient id="radial-gradient-2" cx="948.13" cy="542.38" fx="948.13" fy="542.38" r="206.48" gradientTransform="translate(-14.38 -8.53) scale(1.01)" gradientUnits="userSpaceOnUse">
+      <stop offset=".43" stop-color="#010101"/>
+      <stop offset=".53" stop-color="#030303"/>
+      <stop offset=".61" stop-color="#0d0d0d"/>
+      <stop offset=".68" stop-color="#1d1d1d"/>
+      <stop offset=".74" stop-color="#343434"/>
+      <stop offset=".8" stop-color="#515151"/>
+      <stop offset=".85" stop-color="#757575"/>
+      <stop offset=".91" stop-color="#9f9f9f"/>
+      <stop offset=".96" stop-color="#cfcfcf"/>
+      <stop offset="1" stop-color="#fff"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient" x1="805.08" y1="353.83" x2="1059.79" y2="680.53" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".44" stop-color="#dde7f1"/>
+      <stop offset=".6" stop-color="#dae4ef"/>
+      <stop offset=".7" stop-color="#d2dbe9"/>
+      <stop offset=".79" stop-color="#c5cce0"/>
+      <stop offset=".87" stop-color="#b3b7d2"/>
+      <stop offset=".94" stop-color="#9b9dc1"/>
+      <stop offset="1" stop-color="#817fae"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-5">
+    <g id="Capa_1" data-name="Capa 1">
+      <line x1="0" y2="0"/>
+      <g>
+        <path class="cls-8" d="M1186.6,621.25c0,81.64-66.92,149.41-148.57,149.41h-238.7c-81.65,0-150.27-67.77-150.27-149.41v-238.72c0-81.64,68.62-149.41,150.27-149.41h238.7c81.65,0,148.57,67.77,148.57,149.41v238.72Z"/>
+        <g class="cls-3">
+          <g class="cls-4">
+            <path class="cls-6" d="M737.43,541.29c0,115.6,93.72,209.3,209.32,209.3s209.31-93.71,209.31-209.3-93.72-209.31-209.31-209.31-209.32,93.71-209.32,209.31Z"/>
+          </g>
+        </g>
+        <path class="cls-9" d="M710.96,501.57c0,115.6,93.71,209.3,209.3,209.3s209.32-93.71,209.32-209.3-93.72-209.31-209.32-209.31-209.3,93.71-209.3,209.31Z"/>
+        <path class="cls-7" d="M757.83,557.96c.92-22.21,63.48,5.96,78.85-19.48,11.76-18.21,9.98-43.62,18.15-63.55,13.2-45.29,64.24-26.58,98.33-29.03,35.1-2.84,23.52-82.55,40.57-81.57,7.89,1.63,12.72,10.17,17.62,17.16,16.56,24.94,35.94,80.03,34.09,114.73.81,54.68-46.36,41.56-83.41,36.3-77.73-13.96-20.55,130.24-101.86,107.72-39.53-11.91-87.81-46.92-102.18-81.21l-.16-1.09Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

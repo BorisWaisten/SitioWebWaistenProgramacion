@@ -1,38 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
 html {
-  /* height: 100%; */
+  scroll-behavior: smooth;
 }
+
 html,
 body {
-  /* height: 100%; */
-  color: #fff;
-  background: #1f1934;
+  color: #f8fafc;
+  background: #0f172a;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
 }
 
 main {
-  background: #393a47;
-  height: 100vh;
-  height: 100dvh;
+  background: #0f172a;
+  min-height: 100vh;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets
-  .swiper-pagination-bullet {
-  background-color: #f5741c;
+/* Estilos base mejorados */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  h1 {
+    font-weight: 700;
+  }
+}
+
+/* Componentes personalizados */
+@layer components {
+  .card {
+    @apply bg-neutral-800/50 backdrop-blur-sm border border-neutral-700/50 rounded-xl p-6 hover:bg-neutral-800/70 transition-all duration-300;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-}
-
-@layer base {
-  :root {
-    --font-title: "Roboto Condensed", sans-serif;
   }
 }

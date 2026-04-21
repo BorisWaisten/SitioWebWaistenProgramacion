@@ -1,71 +1,78 @@
 "use client";
-import { useState } from "react";
-import { Instagram, Mail, MessageCircle } from "lucide-react";
-import CircleImage from "@/components/circle-image";
-import TransitionPage from "@/components/transition-page";
-import ContainerPage from "@/components/container-page";
+
+import Image from "next/image";
+import AnimatedSection from '@/components/ui/AnimatedSection';
+import ContactForm from '@/components/ui/ContactForm';
+import { ContactFormData } from '@/types';
 
 const ContactPage = () => {
-    const [showModal, setShowModal] = useState(false);
+  const handleSubmit = async (formData: ContactFormData): Promise<{ success: boolean; message: string }> => {
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    const handleMailClick = () => {
-        setShowModal(true);
-    };
+      const data = await response.json();
 
-    const closeModal = () => {
-        setShowModal(false);
-    };
+      if (response.ok) {
+        return {
+          success: true,
+          message: data.message || 'Mensaje enviado correctamente',
+        };
+      } else {
+        return {
+          success: false,
+          message: data.error || 'Error al enviar el mensaje',
+        };
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      return {
+        success: false,
+        message: 'Error al enviar el mensaje. Por favor, intentá nuevamente.',
+      };
+    }
+  };
 
-    return (
-        <ContainerPage>
-            <TransitionPage />
-            <CircleImage />
-            <div className="flex flex-col items-center justify-center h-full text-center space-y-8">
-                <h1 className="text-2xl leading-tight md:text-4xl">
-                    Ponte en <span className="font-bold text-secondary">contacto conmigo</span>
-                </h1>
-                <div className="grid grid-cols-3 gap-3">
-                    <button
-                        onClick={handleMailClick}
-                        className="text-lg text-secondary hover:underline"
-                    >
-                        <Mail size={30} strokeWidth={1} />
-                    </button>
-                    <a
-                        href="https://instagram.com/waistenprogramacion"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-lg text-secondary hover:underline"
-                    >
-                        <Instagram size={30} strokeWidth={1} />
-                    </a>
-                    <a
-                        href="https://wa.me/15575620"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-lg text-secondary hover:underline"
-                    >
-                        <MessageCircle size={30} strokeWidth={1} />
-                    </a>
-                </div>
-            </div>
+  return (
+    <main className="min-h-screen relative bg-gradient-to-b from-[#0c1a1a] to-[#1c3d5a] py-12 md:py-20">
+      <Image 
+        src="/fondo.jpg" 
+        alt="Background" 
+        fill 
+        className="fixed inset-0 top-0 h-full object-cover opacity-50" 
+      />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <AnimatedSection
+          animation="fadeInUp"
+          className="text-center mb-12 md:mb-16"
+        >
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-[#48bfda]">
+            Contacto
+          </h1>
+          
+          <p className="text-base sm:text-lg md:text-xl text-[#48bfda] max-w-3xl mx-auto px-4">
+            Si tienes alguna pregunta o quieres trabajar en un proyecto juntos, no dudes en contactarme.
+          </p>
+        </AnimatedSection>
 
-            {/* Modal para mostrar el correo */}
-            {showModal && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-                    <div className="bg-white p-6 rounded-lg shadow-lg text-center space-y-4">
-                        <p className="text-lg text-secondary">boriswaisten@gmail.com</p>
-                        <button
-                            onClick={closeModal}
-                            className="px-4 py-2 mt-4 text-white bg-secondary rounded-md hover:bg-secondary/80"
-                        >
-                            Cerrar
-                        </button>
-                    </div>
-                </div>
-            )}
-        </ContainerPage>
-    );
+        <AnimatedSection
+          animation="fadeInUp"
+          delay={0.2}
+          className="max-w-2xl mx-auto"
+        >
+          <div className="bg-[#0c1a1a]/90 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-[#1c3d5a] shadow-2xl">
+            <ContactForm onSubmit={handleSubmit} />
+          </div>
+        </AnimatedSection>
+      </div>
+    </main>
+  );
 };
 
 export default ContactPage;

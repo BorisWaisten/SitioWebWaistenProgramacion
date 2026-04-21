@@ -1,0 +1,105 @@
+/* styles/introduction.css */
+
+/* --- Botón estilo 502 --- */
+.btn-style502 {
+    border: 2px solid #716eef;
+    color: #fff;
+    background: repeating-linear-gradient(
+      40deg,
+      #716eef 0%,
+      #716eef 5%,
+      #fbb8a9 5%,
+      #c15b44 10%
+    );
+    background-size: 200%;
+    background-position: 0 0;
+    text-shadow: 1px 1px 0em #000;
+    transition: all 0.4s ease;
+  }
+  .btn-style502:hover {
+    background-position: 120px;
+    text-shadow: 2px 2px 0.2em #000;
+  }
+  
+  /* --- Botón estilo 503 --- */
+  .btn-style503 {
+    border: 2px solid #dd6395;
+    color: #dd6395;
+    transition: all 0.5s ease;
+  }
+  .btn-style503:hover {
+    box-shadow: inset 5em 0 0 0 #dd7e2a, inset -5em 0 0 0 #dd7e2a;
+    border-color: #dd7e2a;
+    color: #fff;
+  }
+  
+  /* --- Botón estilo 504 --- */
+  .btn-style504 {
+    border: 2px solid #dd7e2a;
+    color: #dd7e2a;
+    transition: all 0.5s ease;
+  }
+  .btn-style504:hover {
+    box-shadow: inset 0 1.5em 0 0 #dd648a, inset 0 -1.5em 0 0 #dd648a;
+    border-color: #dd648a;
+    color: #fff;
+  }
+  
+  /* --- Botón estilo 500 --- */
+  .btn-style500 {
+    border: 2px solid #716eef;
+    color: #716eef;
+    transition: all 0.3s ease;
+  }
+  .btn-style500:hover {
+    color: #fff;
+    background: radial-gradient(circle, #716eef 0.2em, transparent 0.3em) 6em 6em/1em 1em,
+                radial-gradient(circle, #716eef 0.2em, transparent 0.3em) 0 0/1em 1em;
+    animation: ani500 0.6s forwards;
+    transition-delay: 0.2s;
+  }
+  @keyframes ani500 {
+    100% {
+      background-size: 2.375em 2.375em, 0.1em 0.1em;
+    }
+  }
+  
+  /* --- Botón estilo 501 --- */
+  .btn-style501 {
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+    background-size: 200% auto;
+    background-position: left top;
+    border: 2px solid transparent;
+    color: #464646;
+    transition: all 0.4s ease;
+  }
+  .btn-style501:hover {
+    background-position: right bottom;
+    color: #000;
+  }
+  
+  /* --- Botón estilo 4 --- */
+  .btn-style4 {
+    border: 2px solid  #48bfda;
+    color: #48bfda;
+    transition: all 0.4s ease;
+  }
+  .btn-style4:hover {
+    box-shadow: inset 0 0 0.55em 0em white;
+    border-color: white;
+    color: white;
+  }
+  
+  /* --- Botón estilo 2 --- */
+  .btn-style2 {
+    border: 2px solid #dd7e2a;
+    color: #dd7e2a;
+    transition: all 0.4s ease;
+  }
+  .btn-style2:hover {
+    box-shadow: 0 0.25em 0.25em -0.1em #b5c952;
+    transform: translateY(-0.25em);
+    border-color: #b5c952;
+    color: #b5c952;
+  }
+  

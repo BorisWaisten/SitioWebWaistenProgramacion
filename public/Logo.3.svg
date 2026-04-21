@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1001.79 234.07">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 121.98px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #25353a;
+      }
+
+      .cls-3 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-4 {
+        font-family: Lato-Regular, Lato;
+      }
+
+      .cls-5 {
+        font-family: Lato-Bold, Lato;
+        font-weight: 700;
+      }
+
+      .cls-6 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-7 {
+        letter-spacing: -.06em;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(0 105.08)"><tspan class="cls-5"><tspan x="0" y="0" xml:space="preserve">      </tspan><tspan class="cls-7" x="141.24" y="0">W</tspan><tspan x="261.7" y="0">AISTEN</tspan></tspan><tspan class="cls-4"><tspan x="0" y="106.73">P</tspan><tspan class="cls-6" x="74.53" y="106.73">R</tspan><tspan x="150.27" y="106.73">OGRAM</tspan><tspan class="cls-3" x="610.85" y="106.73">A</tspan><tspan x="691.24" y="106.73">CIÓN</tspan></tspan></text>
+  <path class="cls-2" d="M6.44,79.9c.3-7.34,20.97,1.97,26.05-6.44,3.88-6.02,3.3-14.41,6-21,4.36-14.96,21.22-8.78,32.49-9.59,11.6-.94,7.77-27.27,13.4-26.95,2.61.54,4.2,3.36,5.82,5.67,5.47,8.24,11.87,26.44,11.26,37.91.27,18.07-15.32,13.73-27.56,11.99-25.68-4.61-6.79,43.03-33.65,35.59-13.06-3.94-29.01-15.5-33.76-26.83l-.05-.36Z"/>
+</svg>
