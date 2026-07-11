@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import ContactForm from '@/components/ui/ContactForm';
 import { ContactFormData } from '@/types';
@@ -39,34 +38,19 @@ const ContactPage = () => {
   };
 
   return (
-    <main className="min-h-screen relative bg-gradient-to-b from-[#0c1a1a] to-[#1c3d5a] py-12 md:py-20">
-      <Image 
-        src="/fondo.jpg" 
-        alt="Background" 
-        fill 
-        className="fixed inset-0 top-0 h-full object-cover opacity-50" 
-      />
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <AnimatedSection
-          animation="fadeInUp"
-          className="text-center mb-12 md:mb-16"
-        >
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-[#48bfda]">
-            Contacto
+    <main className="pt-32 pb-20 md:pt-40">
+      <div className="container mx-auto px-4 max-w-3xl">
+        <AnimatedSection animation="fadeInUp" className="text-center mb-12 md:mb-16">
+          <h1 className="display text-5xl md:text-7xl mb-6">
+            Con<span className="text-[#48bfda]">tacto</span>
           </h1>
-          
-          <p className="text-base sm:text-lg md:text-xl text-[#48bfda] max-w-3xl mx-auto px-4">
-            Si tienes alguna pregunta o quieres trabajar en un proyecto juntos, no dudes en contactarme.
+          <p className="text-base md:text-lg text-neutral-400 max-w-xl mx-auto">
+            Si tenés alguna pregunta o querés trabajar en un proyecto juntos, escribinos.
           </p>
         </AnimatedSection>
 
-        <AnimatedSection
-          animation="fadeInUp"
-          delay={0.2}
-          className="max-w-2xl mx-auto"
-        >
-          <div className="bg-[#0c1a1a]/90 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-[#1c3d5a] shadow-2xl">
+        <AnimatedSection animation="fadeInUp" delay={0.2}>
+          <div className="card p-6 md:p-10">
             <ContactForm onSubmit={handleSubmit} />
           </div>
         </AnimatedSection>

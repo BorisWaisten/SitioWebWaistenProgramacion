@@ -3,187 +3,94 @@
 import Image from 'next/image';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import Button from '@/components/ui/Button';
-import { Code, GraduationCap, MapPin, Heart, Lightbulb} from 'lucide-react';
+import { Code, Bot, Workflow, Rocket } from 'lucide-react';
 
 export default function About() {
   return (
-    <main className="min-h-screen relative bg-gradient-to-b from-[#0c1a1a] to-[#1c3d5a]">
-      <Image 
-        src="/fondo.jpg" 
-        alt="Background" 
-        width={1000} 
-        height={1000} 
-        className="absolute sm:fixed sm:w-full inset-0 top-0 h-[115vh] sm:h-full sm:object-cover opacity-50" 
-      />
-      
-      <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
-        {/* Hero Section */}
-        <AnimatedSection
-          animation="fadeInUp"
-          className="text-center mb-12 md:mb-16"
-        >
-          <div className="flex justify-center mb-6">
-            <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#48bfda]/30 shadow-2xl">
-              <Image
-                src="/BORIS 2.png"
-                alt="Boris Waisten"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-          
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
-            Boris <span className="bg-gradient-to-r from-[#48bfda] to-[#6acfc7] bg-clip-text text-transparent">Waisten</span>
+    <main className="pt-32 pb-20 md:pt-40">
+      <div className="container mx-auto px-4 max-w-4xl">
+        {/* Hero */}
+        <AnimatedSection animation="fadeInUp" className="text-center mb-12 md:mb-16">
+          <h1 className="display text-5xl md:text-7xl mb-6">
+            El <span className="text-[#48bfda]">estudio</span>
           </h1>
-          
-          <p className="text-lg sm:text-xl md:text-2xl text-[#48bfda] mb-6">
-            Analista de Sistemas | Desarrollador Fullstack
+          <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto">
+            Waisten Programación es un estudio de desarrollo de software.
+            Ayudamos a empresas y emprendedores a digitalizar y automatizar su negocio.
           </p>
         </AnimatedSection>
 
-        {/* About Section */}
-        <div className="max-w-4xl mx-auto">
-          {/* Personal Info */}
-          <AnimatedSection
-            animation="fadeInUp"
-            delay={0.2}
-            className="bg-[#0c1a1a]/90 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-[#1c3d5a] mb-8"
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <Code className="w-6 h-6 md:w-8 md:h-8 text-[#48bfda]" />
-              Sobre Mí
-            </h2>
-            
-            <div className="space-y-4 text-neutral-300">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#48bfda] mt-1 flex-shrink-0" />
-                <p className="text-base md:text-lg">
-                  <span className="text-white font-semibold">Entrerriano</span> viviendo en <span className="text-white font-semibold">Capital Federal</span>
-                </p>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <span className="text-[#48bfda] text-xl">🎂</span>
-                <p className="text-base md:text-lg">
-                  <span className="text-white font-semibold">28 años</span> de edad
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <Code className="w-5 h-5 text-[#48bfda] mt-1 flex-shrink-0" />
-                <p className="text-base md:text-lg">
-                  <span className="text-white font-semibold">Desarrollador Fullstack</span> 
-                </p>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <GraduationCap className="w-5 h-5 text-[#48bfda] mt-1 flex-shrink-0" />
-                <p className="text-base md:text-lg">
-                  <span className="text-white font-semibold">Analista de Sistemas</span> recibido en el Instituto Tecnológico ORT
-                </p>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <GraduationCap className="w-5 h-5 text-[#6acfc7] mt-1 flex-shrink-0" />
-                <p className="text-base md:text-lg">
-                  Actualmente estudiando <span className="text-white font-semibold">Ingeniería Informática</span> en la UCEMA
-                </p>
-              </div>
-            </div>
-          </AnimatedSection>
+        {/* Qué resolvemos */}
+        <AnimatedSection animation="fadeInUp" delay={0.2} className="card p-6 md:p-8 mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center gap-3">
+            <Code className="w-6 h-6 md:w-8 md:h-8 text-[#48bfda]" />
+            Qué hacemos
+          </h2>
+          <p className="text-neutral-300  text-base md:text-lg leading-relaxed">
+            Diseñamos y desarrollamos productos digitales a medida: <span className="text-white font-semibold">sitios web y</span>
+             <span className="text-white font-semibold">aplicaciones</span>, <span className="text-white font-semibold">tiendas online</span>,
+            <span className="text-white font-semibold">sistemas de gestión</span> e <span className="text-white font-semibold">invitaciones digitales</span>. 
+            También creamos <span className="text-white font-semibold">chatbots</span> que
+            atienden a tus clientes 24/7 e <span className="text-white font-semibold">integraciones backend</span> que
+            conectan tus sistemas entre sí — por ejemplo, tu software de gestión
+            con tu CRM — para que la información fluya de forma automática, sin
+            doble carga ni errores manuales. Trabajamos con tecnologías modernas
+            como React, Next.js y Node, priorizando soluciones simples, rápidas y
+            fáciles de mantener.
+          </p>
+        </AnimatedSection>
 
-          {/* Passion Section */}
-          <AnimatedSection
-            animation="fadeInUp"
-            delay={0.4}
-            className="bg-[#0c1a1a]/90 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-[#1c3d5a] mb-8"
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <Heart className="w-6 h-6 md:w-8 md:h-8 text-[#48bfda]" />
-              Mi Pasión
-            </h2>
-            
-            <div className="space-y-4 text-neutral-300 text-base md:text-lg leading-relaxed">
-              <p>
-                Me dedico a la programación porque me <span className="text-[#48bfda] font-semibold">apasiona pensar</span>, 
-                <span className="text-[#48bfda] font-semibold"> desarrollar</span> y 
-                <span className="text-[#48bfda] font-semibold"> generar lógicas</span> a través de código.
-              </p>
-              
-              <div className="flex items-start gap-3 mt-6">
-                <Lightbulb className="w-6 h-6 text-[#6acfc7] mt-1 flex-shrink-0" />
-                <p className="italic text-[#6acfc7]">
-                  &ldquo;Ver el fruto de ese razonamiento plasmado en algo digital es lo que me motiva cada día&rdquo;
-                </p>
-              </div>
-            </div>
-          </AnimatedSection>
+        {/* Cómo trabajamos */}
+        <AnimatedSection animation="fadeInUp" delay={0.6} className="mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
+            <Workflow className="w-7 h-7 text-[#48bfda]" />
+            Cómo trabajamos
+          </h2>
 
-          {/* Skills/Interests */}
-          <AnimatedSection
-            animation="fadeInUp"
-            delay={0.6}
-            className="bg-[#0c1a1a]/90 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-[#1c3d5a] mb-8"
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-              Enfoque Profesional
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-[#1c3d5a]/30 rounded-lg p-4 border border-[#48bfda]/20">
-                <h3 className="text-lg font-semibold text-[#48bfda] mb-2">Desarrollo Fullstack</h3>
-                <p className="text-neutral-300 text-sm">
-                  Experiencia en desarrollo tanto del lado del cliente como del servidor
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              ['Soluciones a medida', 'Cada proyecto parte de entender tu negocio: construimos lo que necesitás, sin funcionalidades de más.'],
+              ['Tecnología moderna', 'React, Next.js y Node como base. Productos rápidos, seguros y preparados para crecer.'],
+              ['Comunicación directa', 'Trato directo y sin intermediarios durante todo el proyecto, con avances visibles desde el primer día.'],
+              ['Acompañamiento continuo', 'La entrega no es el final: damos soporte y evolucionamos el producto junto a tu negocio.'],
+            ].map(([title, desc]) => (
+              <div key={title} className="card p-5">
+                <h3 className="text-lg font-semibold text-[#48bfda] mb-2">{title}</h3>
+                <p className="text-neutral-400 text-sm">{desc}</p>
               </div>
-              
-              <div className="bg-[#1c3d5a]/30 rounded-lg p-4 border border-[#48bfda]/20">
-                <h3 className="text-lg font-semibold text-[#48bfda] mb-2">Análisis de Sistemas</h3>
-                <p className="text-neutral-300 text-sm">
-                  Capacidad para analizar, diseñar e implementar soluciones tecnológicas
-                </p>
-              </div>
-              
-              <div className="bg-[#1c3d5a]/30 rounded-lg p-4 border border-[#48bfda]/20">
-                <h3 className="text-lg font-semibold text-[#48bfda] mb-2">Formación Continua</h3>
-                <p className="text-neutral-300 text-sm">
-                  En constante aprendizaje, actualmente cursando Ingeniería Informática
-                </p>
-              </div>
-              
-              <div className="bg-[#1c3d5a]/30 rounded-lg p-4 border border-[#48bfda]/20">
-                <h3 className="text-lg font-semibold text-[#48bfda] mb-2">Pensamiento Lógico</h3>
-                <p className="text-neutral-300 text-sm">
-                  Pasión por resolver problemas complejos a través del código
-                </p>
-              </div>
-            </div>
-          </AnimatedSection>
+            ))}
+          </div>
+        </AnimatedSection>
 
-          {/* CTA Section */}
-          <AnimatedSection
-            animation="fadeInUp"
-            delay={0.8}
-            className="text-center"
-          >
-            <div className="bg-gradient-to-r from-[#48bfda]/10 to-[#6acfc7]/10 border border-[#48bfda]/20 rounded-lg p-6 md:p-8">
-              <h2 className="text-xl md:text-2xl font-bold text-white mb-4">
-                ¿Trabajamos juntos?
-              </h2>
-              <p className="text-neutral-300 mb-6 text-sm md:text-base">
-                Si tienes un proyecto en mente o quieres conocer más sobre mi trabajo, no dudes en contactarme.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button href="/works" variant="primary">
-                  Ver Proyectos
-                </Button>
-                <Button href="/contact" variant="secondary">
-                  Contactar
-                </Button>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
+        {/* Quién está detrás */}
+        <AnimatedSection animation="fadeInUp" delay={0.7} className="card p-6 md:p-8 mb-12 flex flex-col sm:flex-row items-center gap-6">
+          <div className="relative w-28 h-28 md:w-36 md:h-36 flex-shrink-0 rounded-full overflow-hidden border border-white/10">
+            <Image src="/BORIS 2.png" alt="Boris Waisten" fill className="object-cover" />
+          </div>
+          <div className="text-center sm:text-left">
+            <h2 className="text-xl md:text-2xl font-bold text-white mb-1">Boris Waisten</h2>
+            <p className="text-[#48bfda] text-sm md:text-base mb-3">Fundador · Desarrollador Fullstack</p>
+            <p className="text-neutral-400 text-sm md:text-base">
+              Analista de Sistemas y desarrollador fullstack, lidera cada proyecto
+              del estudio de principio a fin.
+            </p>
+          </div>
+        </AnimatedSection>
+
+        {/* CTA */}
+        <AnimatedSection animation="fadeInUp" delay={0.8} className="text-center">
+          <h2 className="display text-3xl md:text-5xl mb-4">
+            <Rocket className="inline w-8 h-8 md:w-10 md:h-10 text-[#48bfda] mr-2 -mt-2" />
+            ¿Trabajamos <span className="text-[#48bfda]">juntos?</span>
+          </h2>
+          <p className="text-neutral-400 mb-8 max-w-xl mx-auto">
+            Contanos qué necesita tu negocio y te proponemos la mejor forma de resolverlo.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/works" variant="primary">Ver Proyectos</Button>
+            <Button href="/contact" variant="secondary">Contactar</Button>
+          </div>
+        </AnimatedSection>
       </div>
     </main>
   );

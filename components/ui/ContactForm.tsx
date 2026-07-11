@@ -70,7 +70,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
             value={formData.name}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 bg-[#0c1a1a]/50 border border-[#1c3d5a] rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:border-[#48bfda] transition-colors"
+            className="w-full px-4 py-3 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder-neutral-400 focus:outline-none focus:border-[#48bfda] transition-colors"
             placeholder="Tu nombre completo"
           />
         </div>
@@ -86,7 +86,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
             value={formData.email}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 bg-[#0c1a1a]/50 border border-[#1c3d5a] rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:border-[#48bfda] transition-colors"
+            className="w-full px-4 py-3 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder-neutral-400 focus:outline-none focus:border-[#48bfda] transition-colors"
             placeholder="tu@email.com"
           />
         </div>
@@ -102,7 +102,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
           name="phone"
           value={formData.phone}
           onChange={handleInputChange}
-          className="w-full px-4 py-3 bg-[#0c1a1a]/50 border border-[#1c3d5a] rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:border-[#48bfda] transition-colors"
+          className="w-full px-4 py-3 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder-neutral-400 focus:outline-none focus:border-[#48bfda] transition-colors"
           placeholder="+54 9 11 1234-5678"
         />
       </div>
@@ -117,7 +117,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
           value={formData.project}
           onChange={handleInputChange}
           required
-          className="w-full px-4 py-3 bg-[#0c1a1a]/50 border border-[#1c3d5a] rounded-lg text-white focus:outline-none focus:border-[#48bfda] transition-colors"
+          className="w-full px-4 py-3 bg-white/[0.04] border border-white/10 rounded-xl text-white focus:outline-none focus:border-[#48bfda] transition-colors"
         >
           <option value="">Selecciona un tipo de proyecto</option>
           <option value="Página Web">Página Web</option>
@@ -140,7 +140,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
           onChange={handleInputChange}
           required
           rows={6}
-          className="w-full px-4 py-3 bg-[#0c1a1a]/50 border border-[#1c3d5a] rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:border-[#48bfda] transition-colors resize-none"
+          className="w-full px-4 py-3 bg-white/[0.04] border border-white/10 rounded-xl text-white placeholder-neutral-400 focus:outline-none focus:border-[#48bfda] transition-colors resize-none"
           placeholder="Cuéntame sobre tu proyecto..."
         />
       </div>

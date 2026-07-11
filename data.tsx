@@ -1,5 +1,5 @@
 
-import { Instagram,BookText,Server, CodeSquare, HomeIcon, Linkedin,  PhoneCallIcon, Pencil, Computer, Book, Rocket, Speech, CarFront, AreaChart, StoreIcon, ScrollIcon } from "lucide-react";
+import { Instagram,BookText,Server, CodeSquare, HomeIcon, Linkedin,  PhoneCallIcon, Pencil, Computer, Book, Rocket, Speech, CarFront, AreaChart, StoreIcon, ScrollIcon, Bot, Workflow } from "lucide-react";
 
 export const socialNetworks = [
     // {
@@ -64,6 +64,18 @@ export const serviceData = [
     title: "Invitaciones de Eventos",
     description: "Diseño y desarrollo de invitaciones digitales interactivas para bodas y eventos especiales.",
     image: "/webBoda.png",
+  },
+  {
+    icon: <Bot />,
+    title: "Chatbots",
+    description: "Bots para WhatsApp y web que responden consultas, agendan turnos y captan clientes 24/7.",
+    image: "",
+  },
+  {
+    icon: <Workflow />,
+    title: "Integraciones Backend",
+    description: "Conectamos tus sistemas entre sí, por ejemplo tu software de gestión con tu CRM, para que la información fluya sin carga manual.",
+    image: "",
   },
 ];
 

@@ -9,32 +9,38 @@ html {
 html,
 body {
   color: #f8fafc;
-  background: #0f172a;
-  font-family: 'Inter', sans-serif;
+  background: #05090e;
   line-height: 1.6;
 }
 
 main {
-  background: #0f172a;
   min-height: 100vh;
 }
 
-/* Estilos base mejorados */
 @layer base {
   h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     line-height: 1.2;
   }
-  
-  h1 {
-    font-weight: 700;
+
+  /* Reparte las líneas de los párrafos de forma pareja (evita palabras sueltas al final) */
+  p {
+    text-wrap: balance;
   }
 }
 
-/* Componentes personalizados */
 @layer components {
+  /* Card estilo Mobbin: superficie sutil + borde hairline */
   .card {
-    @apply bg-neutral-800/50 backdrop-blur-sm border border-neutral-700/50 rounded-xl p-6 hover:bg-neutral-800/70 transition-all duration-300;
+    @apply bg-white/[0.03] border border-white/10 rounded-2xl transition-colors duration-300 hover:border-[#48bfda]/40;
+  }
+  /* Chip / etiqueta pill */
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-sm text-neutral-300;
+  }
+  /* Título display grande */
+  .display {
+    @apply font-display uppercase leading-[0.95] tracking-wide text-white;
   }
 }
 
