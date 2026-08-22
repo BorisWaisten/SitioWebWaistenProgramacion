@@ -1,4 +1,4 @@
-import type { Metadata as NextMetadata } from "next";
+import type { Metadata } from "next";
 import { Urbanist, Anton } from "next/font/google";
 import { Analytics } from '@vercel/analytics/react';
 import Link from "next/link";
@@ -13,18 +13,70 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 import Navbar from "@/components/navbar";
+import GoogleAnalytics from "@/components/google-analytics";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 const anton = Anton({ weight: "400", subsets: ["latin"], variable: "--font-anton" });
 
-type Metadata = NextMetadata & {
-  image: string;
-}
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://waistenprogramacion.com.ar";
+const siteName = "Waisten Programación";
+const siteDescription =
+  "Estudio de desarrollo de software. Creamos sitios web, tiendas online, sistemas de gestión, invitaciones digitales y chatbots a medida con React y Next.js.";
 
 export const metadata: Metadata = {
-  title: "Waisten Programación",
-  description: "Servicios de programación",
-  image: "/favicon.ico",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${siteName} | Desarrollo de software a medida`,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  keywords: [
+    "desarrollo de software",
+    "desarrollo web",
+    "programación a medida",
+    "tiendas online",
+    "sistemas de gestión",
+    "invitaciones digitales",
+    "chatbots",
+    "React",
+    "Next.js",
+    "Argentina",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: siteUrl,
+    siteName,
+    title: `${siteName} | Desarrollo de software a medida`,
+    description: siteDescription,
+    images: [{ url: "/logoWaisten.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteName} | Desarrollo de software a medida`,
+    description: siteDescription,
+    images: ["/logoWaisten.png"],
+  },
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
+    : {}),
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteName,
+  url: siteUrl,
+  logo: `${siteUrl}/logoWaisten.png`,
+  description: siteDescription,
+  sameAs: ["https://www.instagram.com/waistenprogramacion/"],
 };
 
 export default function RootLayout({
@@ -34,6 +86,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+      </head>
       <body className={`${urbanist.className} ${anton.variable}`}>
         <Navbar />
         {children}
@@ -48,6 +106,7 @@ export default function RootLayout({
           </div>
         </footer>
         <Analytics />
+        <GoogleAnalytics />
       </body>
     </html>
   );
