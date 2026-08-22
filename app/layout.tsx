@@ -13,7 +13,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 import Navbar from "@/components/navbar";
-import GoogleAnalytics from "@/components/google-analytics";
+import { GoogleTagManagerScript, GoogleTagManagerNoScript } from "@/components/google-tag-manager";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 const anton = Anton({ weight: "400", subsets: ["latin"], variable: "--font-anton" });
@@ -87,12 +87,14 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        <GoogleTagManagerScript />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
       </head>
       <body className={`${urbanist.className} ${anton.variable}`}>
+        <GoogleTagManagerNoScript />
         <Navbar />
         {children}
         <footer className="border-t border-white/10 py-10">
@@ -106,7 +108,6 @@ export default function RootLayout({
           </div>
         </footer>
         <Analytics />
-        <GoogleAnalytics />
       </body>
     </html>
   );
