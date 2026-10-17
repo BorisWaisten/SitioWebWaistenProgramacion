@@ -144,7 +144,7 @@ export const dataPortfolio = [
     {
         id: 4,
         title: "Invitacion de Boda",
-        image: "/webBoda3.png",
+        image: "/webBoda3.webp",
         urlGithub: "https://github.com/BorisWaisten/boda-fran-stefi",
         urlDemo: "https://boda-fran-stefi.vercel.app/",
         category: "Invitaciones",
