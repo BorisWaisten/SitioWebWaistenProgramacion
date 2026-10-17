@@ -130,21 +130,6 @@ export default function Hero({ ready }: HeroProps) {
           Contactar
         </Button>
       </motion.div>
-
-      {/* Indicador de scroll */}
-      <motion.div
-        aria-hidden
-        className="absolute bottom-8 left-1/2 flex h-10 w-6 -translate-x-1/2 justify-center rounded-full border border-white/20"
-        initial={{ opacity: 0 }}
-        animate={ready ? { opacity: 1 } : undefined}
-        transition={{ delay: 1.4 }}
-      >
-        <motion.span
-          className="mt-2 h-2 w-1 rounded-full bg-[#48bfda]"
-          animate={{ y: [0, 12, 0] }}
-          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </motion.div>
     </section>
   );
 }

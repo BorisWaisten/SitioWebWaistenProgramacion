@@ -152,17 +152,6 @@ export default function LogoIntro({ onDone }: LogoIntroProps) {
           ))}
         </div>
       </div>
-
-      <button
-        type="button"
-        onClick={(e) => {
-          e.stopPropagation();
-          skip();
-        }}
-        className="absolute bottom-6 right-6 rounded-full border border-white/20 bg-[#05090e]/40 px-4 py-1.5 text-xs uppercase tracking-widest text-white/80 backdrop-blur hover:text-white"
-      >
-        Saltar intro
-      </button>
     </div>
   );
 }
