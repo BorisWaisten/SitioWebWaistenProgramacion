@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "El Estudio",
+  title: "Sobre mí",
   description:
-    "Conocé Waisten Programación: estudio de desarrollo de software especializado en sitios web, tiendas online, sistemas de gestión, chatbots e integraciones backend con React y Next.js.",
+    "Conocé a Boris Waisten, fundador de Waisten Programación: estudio de desarrollo de software especializado en sitios web, tiendas online, sistemas de gestión, chatbots e integraciones backend con React y Next.js.",
   alternates: {
     canonical: "/about",
   },

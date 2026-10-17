@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import { motion, AnimatePresence } from 'motion/react';
+import LogoMark from "@/components/brand/LogoMark";
 
 const navItems = [
   { name: "inicio", href: "/" },
@@ -25,14 +25,15 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`site-nav fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled ? "bg-[#05090e]/80 backdrop-blur-md" : "bg-transparent"
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/icono1.svg" alt="Waisten Programación" width={36} height={36} />
+            <LogoMark size={36} />
+            <span className="sr-only">Waisten Programación</span>
             <span className="hidden sm:block font-display uppercase tracking-wide text-lg text-white">
               Waisten
             </span>

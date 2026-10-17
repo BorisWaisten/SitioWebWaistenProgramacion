@@ -13,6 +13,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 import Navbar from "@/components/navbar";
+import MotionProvider from "@/components/motion-provider";
 import { GoogleTagManagerScript, GoogleTagManagerNoScript } from "@/components/google-tag-manager";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
@@ -69,6 +70,10 @@ export const metadata: Metadata = {
     : {}),
 };
 
+// Decide antes del primer paint si se reproduce la intro del logo,
+// así la página nunca se ve "por debajo" ni parpadea en visitas repetidas.
+const introScript = `try{var d=document.documentElement;if(location.pathname==="/"&&!sessionStorage.getItem("wp-intro-seen")&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.dataset.intro="playing"}else{d.dataset.intro="done"}}catch(e){document.documentElement.dataset.intro="done"}`;
+
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -85,8 +90,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: introScript }} />
         <GoogleTagManagerScript />
         <script
           type="application/ld+json"
@@ -95,8 +101,10 @@ export default function RootLayout({
       </head>
       <body className={`${urbanist.className} ${anton.variable}`}>
         <GoogleTagManagerNoScript />
-        <Navbar />
-        {children}
+        <MotionProvider>
+          <Navbar />
+          {children}
+        </MotionProvider>
         <footer className="border-t border-white/10 py-10">
           <div className="container mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-500">
             <p>© {new Date().getFullYear()} Waisten Programación</p>

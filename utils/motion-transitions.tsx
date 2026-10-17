@@ -31,7 +31,9 @@ export const motionTransitionsAbout = {
 };
 
 
-export const fadeIn = (position: string) => {
+import type { Variants } from "motion/react";
+
+export const fadeIn = (position: string): Variants => {
     return {
         visible: {
             y: 0,

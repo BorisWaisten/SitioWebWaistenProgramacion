@@ -1,7 +1,7 @@
 "use client"
 
 import { TypeAnimation } from 'react-type-animation';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import './introduction.css';
 import { CoverParticles } from './cover-particles';
 import { ArrowRight, Code, Smartphone, Globe, Zap } from 'lucide-react';

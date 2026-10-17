@@ -11,11 +11,23 @@ export class InMemoryProjectRepository implements ProjectRepository {
       image: project.image,
       urlGithub: project.urlGithub,
       urlDemo: project.urlDemo,
+      category: project.category,
+      featured: project.featured,
+      description: project.description,
+      device: project.device === 'mobile' ? 'mobile' : 'desktop',
     }));
   }
 
   getAllProjects(): Project[] {
     return [...this.projects];
+  }
+
+  getFeaturedProjects(): Project[] {
+    return this.projects.filter(project => project.featured);
+  }
+
+  getCategories(): string[] {
+    return Array.from(new Set(this.projects.map(project => project.category).filter(Boolean))) as string[];
   }
 
   getProjectById(id: number): Project | undefined {

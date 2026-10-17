@@ -1,53 +1,34 @@
 "use client"
 
+import { useState } from 'react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import ServiceCard from '@/components/ui/ServiceCard';
 import Button from '@/components/ui/Button';
+import LogoIntro from '@/components/brand/LogoIntro';
+import LogoMark from '@/components/brand/LogoMark';
+import Hero from '@/components/home/Hero';
+import FeaturedWorks from '@/components/home/FeaturedWorks';
+import Process from '@/components/home/Process';
 import { useRepositories } from '@/hooks/useRepositories';
 
 export default function Home() {
-  const { serviceRepository } = useRepositories();
+  const { serviceRepository, projectRepository } = useRepositories();
   const services = serviceRepository.getAllServices();
+  const featured = projectRepository.getFeaturedProjects();
+  const [introDone, setIntroDone] = useState(false);
 
   return (
-    <main className="relative overflow-hidden">
+    // overflow-x-clip (y no overflow-hidden) para no romper el position: sticky de la galería
+    <main className="relative overflow-x-clip">
+      <LogoIntro onDone={() => setIntroDone(true)} />
+
       {/* Glow de fondo */}
       <div
         aria-hidden
         className="pointer-events-none absolute -top-48 left-1/2 h-[600px] w-[900px] -translate-x-1/2 rounded-full bg-[#48bfda]/10 blur-3xl"
       />
 
-      {/* Hero */}
-      <section className="relative z-10 flex flex-col items-center justify-center text-center px-4 pt-40 pb-24 md:pt-52 md:pb-32">
-        <AnimatedSection animation="fadeInUp">
-          <span className="chip mb-8">
-            <span className="h-2 w-2 rounded-full bg-[#48bfda]" />
-            Estudio de desarrollo de software
-          </span>
-        </AnimatedSection>
-
-        <AnimatedSection animation="fadeInUp" delay={0.15}>
-          <h1 className="display text-5xl sm:text-7xl md:text-8xl text-balance">
-            Ideas que se vuelven{" "}<br />
-            <span className="text-[#48bfda]">productos digitales</span>
-          </h1>
-        </AnimatedSection>
-
-        <AnimatedSection animation="fadeInUp" delay={0.3}>
-          <p className="mt-8 max-w-2xl text-base md:text-lg text-neutral-400">
-            Diseñamos y desarrollamos sitios web, tiendas online, sistemas de
-            gestión e invitaciones digitales con tecnologías modernas como
-            React y Next.js.
-          </p>
-        </AnimatedSection>
-
-        <AnimatedSection animation="fadeInUp" delay={0.45}>
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/works" showArrow>Ver proyectos</Button>
-            <Button href="/contact" variant="secondary">Contactar</Button>
-          </div>
-        </AnimatedSection>
-      </section>
+      <Hero ready={introDone} />
 
       {/* Servicios */}
       <section className="relative z-10 py-20 md:py-28">
@@ -61,19 +42,24 @@ export default function Home() {
             </p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <AnimatedSection key={service.title} animation="stagger" delay={index * 0.1}>
-                <ServiceCard service={service} />
-              </AnimatedSection>
+              <ServiceCard key={service.title} service={service} index={index % 3} />
             ))}
           </div>
         </div>
       </section>
 
+      <FeaturedWorks projects={featured} />
+
+      <Process />
+
       {/* CTA final */}
       <section className="relative z-10 py-24 md:py-32 text-center px-4">
         <AnimatedSection animation="fadeInUp">
+          <div className="mb-8 flex justify-center">
+            <LogoMark size={64} />
+          </div>
           <h2 className="display text-4xl md:text-6xl mb-6 text-balance">
             ¿Tenés un proyecto <span className="text-[#48bfda]">en mente?</span>
           </h2>

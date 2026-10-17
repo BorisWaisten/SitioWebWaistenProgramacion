@@ -1,5 +1,7 @@
 "use client"
 
+import { useState } from 'react';
+import { AnimatePresence, LayoutGroup, motion } from 'motion/react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import ProjectCard from '@/components/ui/ProjectCard';
 import Button from '@/components/ui/Button';
@@ -7,7 +9,10 @@ import { useRepositories } from '@/hooks/useRepositories';
 
 const WorksPage = () => {
   const { projectRepository } = useRepositories();
-  const projects = projectRepository.getAllProjects();
+  const allProjects = projectRepository.getAllProjects();
+  const filters = ['Todos', ...projectRepository.getCategories()];
+  const [active, setActive] = useState('Todos');
+  const projects = active === 'Todos' ? allProjects : allProjects.filter((p) => p.category === active);
 
   return (
     <main className="pt-32 pb-20 md:pt-40">
@@ -22,12 +27,39 @@ const WorksPage = () => {
           </p>
         </AnimatedSection>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
-          ))}
-        </div>
+        {/* Filtros: la pastilla activa se desliza entre opciones (layoutId) */}
+        <LayoutGroup>
+          <div className="mb-10 flex flex-wrap gap-2">
+            {filters.map((filter) => (
+              <button
+                key={filter}
+                type="button"
+                onClick={() => setActive(filter)}
+                className={`relative rounded-full border border-white/10 px-4 py-1.5 text-sm transition-colors ${
+                  active === filter ? 'text-[#05090e]' : 'text-neutral-400 hover:text-white'
+                }`}
+              >
+                {active === filter && (
+                  <motion.span
+                    layoutId="works-filter"
+                    className="absolute inset-0 rounded-full bg-[#48bfda]"
+                    transition={{ type: 'spring', bounce: 0.2, duration: 0.5 }}
+                  />
+                )}
+                <span className="relative">{filter}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Projects Grid */}
+          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <AnimatePresence mode="popLayout">
+              {projects.map((project, index) => (
+                <ProjectCard key={project.id} project={project} index={index} />
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        </LayoutGroup>
 
         {/* CTA */}
         <AnimatedSection animation="fadeInUp" delay={0.3} className="text-center mt-20">

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 
 const CallToAction = () => (
   <section className="py-20 bg-primary-200 text-secondary-900 text-center">

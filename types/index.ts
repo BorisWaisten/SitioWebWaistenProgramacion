@@ -7,6 +7,10 @@ export interface Project {
   urlDemo: string;
   description?: string;
   technologies?: string[];
+  category?: string;
+  featured?: boolean;
+  /** "mobile" para proyectos pensados para celular (captura vertical) */
+  device?: 'desktop' | 'mobile';
 }
 
 export interface Service {
@@ -44,6 +48,8 @@ export interface EmailService {
 export interface ProjectRepository {
   getAllProjects(): Project[];
   getProjectById(id: number): Project | undefined;
+  getFeaturedProjects(): Project[];
+  getCategories(): string[];
 }
 
 export interface ServiceRepository {
