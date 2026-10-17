@@ -14,6 +14,7 @@ export class InMemoryProjectRepository implements ProjectRepository {
       category: project.category,
       featured: project.featured,
       description: project.description,
+      device: project.device === 'mobile' ? 'mobile' : 'desktop',
     }));
   }
 

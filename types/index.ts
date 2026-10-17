@@ -9,6 +9,8 @@ export interface Project {
   technologies?: string[];
   category?: string;
   featured?: boolean;
+  /** "mobile" para proyectos pensados para celular (captura vertical) */
+  device?: 'desktop' | 'mobile';
 }
 
 export interface Service {
