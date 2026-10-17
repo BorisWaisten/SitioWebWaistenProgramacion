@@ -80,26 +80,25 @@ export const serviceData = [
 ];
 
 export const dataPortfolio = [
-    // Sin captura todavía: image vacía muestra una portada de marca (ver ProjectCover)
     {
         id: 13,
         title: "Sitio Web Miraia",
-        image: "",
+        image: "/webMiraia.webp",
         urlGithub: "",
         urlDemo: "https://miraia.com.ar/",
         category: "Sitios web",
         featured: true,
-        description: "Sitio web para Miraia.",
+        description: "Sitio para proveedor de alfombras modulares y piso técnico para arquitectura contract.",
     },
     {
         id: 14,
-        title: "Sitio Web Algalope Argentina",
-        image: "",
+        title: "Sitio Web Al Galope Yerba Mate",
+        image: "/webAlGalope.webp",
         urlGithub: "",
         urlDemo: "https://www.algalopeargentina.com/",
         category: "Sitios web",
         featured: true,
-        description: "Sitio web para Algalope Argentina.",
+        description: "Sitio bilingüe para marca de yerba mate de Misiones con foco en exportación.",
     },
     {
         id: 12,
