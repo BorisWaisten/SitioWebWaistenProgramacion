@@ -59,13 +59,13 @@ export const metadata: Metadata = {
     siteName,
     title: `${siteName} | Desarrollo de software a medida`,
     description: siteDescription,
-    images: [{ url: "/logoWaisten.png" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Waisten Programación - Desarrollo de software a medida" }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteName} | Desarrollo de software a medida`,
     description: siteDescription,
-    images: ["/logoWaisten.png"],
+    images: ["/og-image.png"],
   },
   ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
     ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
@@ -81,7 +81,7 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: siteName,
   url: siteUrl,
-  logo: `${siteUrl}/logoWaisten.png`,
+  logo: `${siteUrl}/logo-waisten.png`,
   description: siteDescription,
   sameAs: ["https://www.instagram.com/waistenprogramacion/"],
   contactPoint: {
