@@ -80,6 +80,27 @@ export const serviceData = [
 ];
 
 export const dataPortfolio = [
+    // Sin captura todavía: image vacía muestra una portada de marca (ver ProjectCover)
+    {
+        id: 13,
+        title: "Sitio Web Miraia",
+        image: "",
+        urlGithub: "",
+        urlDemo: "https://miraia.com.ar/",
+        category: "Sitios web",
+        featured: true,
+        description: "Sitio web para Miraia.",
+    },
+    {
+        id: 14,
+        title: "Sitio Web Algalope Argentina",
+        image: "",
+        urlGithub: "",
+        urlDemo: "https://www.algalopeargentina.com/",
+        category: "Sitios web",
+        featured: true,
+        description: "Sitio web para Algalope Argentina.",
+    },
     {
         id: 12,
         title: "Invitación de cumple de 15 (mobile)",
@@ -171,22 +192,12 @@ export const dataPortfolio = [
         description: "Plataforma de streaming con sistema de donaciones y reproducción de videos.",
     },
     {
-        id: 9,
-        title: "Demo App Ecommerce",
-        image: "/webEco.png",
-        urlGithub: "https://github.com/BorisWaisten/Ecommerce-app",
-        urlDemo: "https://ecommerce-app-bw.vercel.app/",
-        category: "E-commerce",
-        featured: true,
-        description: "Demo de e-commerce con gestión de productos.",
-    },
-    {
         id: 10,
         title: "Pagina Web Apicola",
         image: "/webApicola.png",
         urlGithub: "https://github.com/BorisWaisten/proyect-apicola",
         urlDemo: "https://argentinehoney.com/",
-        category: "E-commerce",
+        category: "Sitios web",
         featured: false,
         description: "Sitio web para empresa apícola.",
     },

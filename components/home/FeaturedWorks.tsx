@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import Button from "@/components/ui/Button";
+import ProjectCover from "@/components/ui/ProjectCover";
 import { Project } from "@/types";
 
 interface FeaturedWorksProps {
@@ -40,10 +40,8 @@ function BrowserCard({ project, index }: { project: Project; index: number }) {
           </span>
         </div>
         <div className="relative aspect-[16/10] overflow-hidden">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
+          <ProjectCover
+            project={project}
             sizes="(min-width: 1024px) 46vw, 80vw"
             className="object-cover object-top transition-transform duration-[1.2s] ease-out group-hover:scale-[1.04]"
           />

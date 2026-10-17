@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
-import Image from 'next/image';
+import ProjectCover from './ProjectCover';
 import { Project } from '@/types';
 
 interface ProjectCardProps {
@@ -54,10 +54,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           visible: { clipPath: 'inset(0% 0% 0% 0%)', transition: { duration: 0.9, ease, delay: index * 0.05 + 0.1 } },
         }}
       >
-        <Image
-          src={project.image}
-          alt={project.title}
-          fill
+        <ProjectCover
+          project={project}
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
         />
