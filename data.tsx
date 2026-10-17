@@ -86,6 +86,9 @@ export const dataPortfolio = [
         image: "/15Sarah.jpeg",
         urlGithub: "",
         urlDemo: "https://invitaciones.waistenprogramacion.com.ar/15Sarah",
+        category: "Invitaciones",
+        featured: false,
+        description: "Invitación digital pensada para celular.",
     },
     {
         id: 1,
@@ -93,6 +96,9 @@ export const dataPortfolio = [
         image: "/webDraSacco.png",
         urlGithub: "https://github.com/BorisWaisten/dermatologia-sacco",
         urlDemo: "https://www.dranataliasacco.com/",
+        category: "Sitios web",
+        featured: true,
+        description: "Sitio web profesional para consultorio de dermatología.",
     },
     {
         id: 2,
@@ -100,6 +106,9 @@ export const dataPortfolio = [
         image: "/webLAIBC.png",
         urlGithub: "https://github.com/BorisWaisten/proyect-apicola",
         urlDemo: "https://latinislamicbusiness.com/",
+        category: "Sitios web",
+        featured: true,
+        description: "Sitio institucional para centro de negocios.",
     },
     {
             id: 3,
@@ -107,6 +116,9 @@ export const dataPortfolio = [
         image: "/webMvg.png",
         urlGithub: "https://github.com/LucasWaisten/mvg",
         urlDemo: "https://mvg.com.ar/",
+        category: "Sitios web",
+        featured: false,
+        description: "Sitio web para el Movimiento Vida en Gracia.",
     },
     {
         id: 4,
@@ -114,6 +126,9 @@ export const dataPortfolio = [
         image: "/webBoda3.png",
         urlGithub: "https://github.com/BorisWaisten/boda-fran-stefi",
         urlDemo: "https://boda-fran-stefi.vercel.app/",
+        category: "Invitaciones",
+        featured: false,
+        description: "Invitación digital para boda.",
     },
     {
         id: 5,
@@ -121,6 +136,9 @@ export const dataPortfolio = [
         image: "/webEstudioGráfico.png",
         urlGithub: "https://github.com/BorisWaisten/proyect-apicola",
         urlDemo: "https://design.waistenprogramacion.com.ar/",
+        category: "Sitios web",
+        featured: true,
+        description: "Sitio web para estudio de diseño gráfico.",
     },
     {
         id: 6,
@@ -128,6 +146,9 @@ export const dataPortfolio = [
         image: "/webCamara.png",
         urlGithub: "https://github.com/BorisWaisten/proyect-apicola",
         urlDemo: "https://www.acrearg.com/",
+        category: "Sitios web",
+        featured: false,
+        description: "Sitio institucional para cámara de economía regional.",
     },
     {
         id: 7,
@@ -135,6 +156,9 @@ export const dataPortfolio = [
         image: "/webBoda2.png",
         urlGithub: "https://github.com/BorisWaisten/proyect-apicola",
         urlDemo: "https://boda-syd.vercel.app/",
+        category: "Invitaciones",
+        featured: true,
+        description: "Invitación digital para boda.",
     },
     {
         id:8,
@@ -142,6 +166,9 @@ export const dataPortfolio = [
         image:"/webTriduo.png",
         urlGithub:"https://github.com/LucasWaisten/triduo-op-ar",
         urlDemo:"https://hemosvistosugloria.op.org.ar",
+        category: "Plataformas",
+        featured: true,
+        description: "Plataforma de streaming con sistema de donaciones y reproducción de videos.",
     },
     {
         id: 9,
@@ -149,6 +176,9 @@ export const dataPortfolio = [
         image: "/webEco.png",
         urlGithub: "https://github.com/BorisWaisten/Ecommerce-app",
         urlDemo: "https://ecommerce-app-bw.vercel.app/",
+        category: "E-commerce",
+        featured: true,
+        description: "Demo de e-commerce con gestión de productos.",
     },
     {
         id: 10,
@@ -156,6 +186,9 @@ export const dataPortfolio = [
         image: "/webApicola.png",
         urlGithub: "https://github.com/BorisWaisten/proyect-apicola",
         urlDemo: "https://argentinehoney.com/",
+        category: "E-commerce",
+        featured: false,
+        description: "Sitio web para empresa apícola.",
     },
     {
         id: 11,
@@ -163,6 +196,9 @@ export const dataPortfolio = [
         image: "/webBoda.png",
         urlGithub: "https://github.com/BorisWaisten/invitacion-boda",
         urlDemo: "https://martuygino.vercel.app/",
+        category: "Invitaciones",
+        featured: false,
+        description: "Invitación digital para boda.",
     },
 ];
 

@@ -7,7 +7,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 const data = [
   { rubro: 'Indumentaria', porcentaje: 80 },

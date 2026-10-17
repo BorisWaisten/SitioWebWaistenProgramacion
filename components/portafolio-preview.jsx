@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from 'motion/react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { ExternalLink, Calendar, Users, TrendingUp, ArrowRight } from "lucide-react";
