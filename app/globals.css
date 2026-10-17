@@ -67,3 +67,6 @@ html[data-intro="playing"] .site-nav {
   opacity: 0;
   transform: translateY(-16px);
 }
+html[data-intro="playing"] .whatsapp-float {
+  display: none;
+}

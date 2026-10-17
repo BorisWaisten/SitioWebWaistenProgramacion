@@ -2,6 +2,7 @@
 
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import ContactForm from '@/components/ui/ContactForm';
+import ContactChannels from '@/components/ui/ContactChannels';
 import { ContactFormData } from '@/types';
 
 const ContactPage = () => {
@@ -45,11 +46,18 @@ const ContactPage = () => {
             Con<span className="text-[#48bfda]">tacto</span>
           </h1>
           <p className="text-base md:text-lg text-neutral-400 max-w-xl mx-auto">
-            Si tenés alguna pregunta o querés trabajar en un proyecto juntos, escribinos.
+            Escribime por WhatsApp, mandame un mail o dejame tu mensaje acá abajo. Como te quede más cómodo.
           </p>
         </AnimatedSection>
 
-        <AnimatedSection animation="fadeInUp" delay={0.2}>
+        <div className="mb-16">
+          <ContactChannels />
+        </div>
+
+        <AnimatedSection animation="fadeInUp" delay={0.35}>
+          <h2 className="mb-6 text-center text-xl font-semibold text-white md:text-2xl">
+            O dejame tu mensaje
+          </h2>
           <div className="card p-6 md:p-10">
             <ContactForm onSubmit={handleSubmit} />
           </div>
